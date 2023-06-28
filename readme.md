@@ -7,7 +7,7 @@ Este é um simples site em JavaScript e HTML que foi criado para ajudar no apren
 - Permite ao usuário inserir as notas de avaliações e trabalhos para cada disciplina.
 - Calcula a média ponderada das notas inseridas.
 - Informa se o aluno seria aprovado ou reprovado na disciplina, de acordo com a média mínima estabelecida e as notas fornecidas.
-- Salva as notas e médias no armazenamento local para uma possivél simulação posterior
+- Salva as notas e médias no armazenamento local para uma possivél simulação posterior.
 
 ## Pré-requisitos
 
