@@ -9,10 +9,6 @@ Este é um simples site em JavaScript e HTML que foi criado para ajudar no apren
 - Informa se o aluno seria aprovado ou reprovado na disciplina, de acordo com a média mínima estabelecida e as notas fornecidas.
 - Salva as notas e médias no armazenamento local para uma possivél simulação posterior.
 
-## Pré-requisitos
-
-Para executar o simulador, você precisa ter um navegador web moderno que suporte JavaScript.
-
 ## Contribuição
 
 Este projeto foi criado como parte do aprendizado de JavaScript e HTML. Se você tiver sugestões de melhorias ou novas funcionalidades, fique à vontade para contribuir. Basta fazer um fork deste repositório, fazer suas alterações e enviar um pull request.
