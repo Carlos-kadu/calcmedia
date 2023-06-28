@@ -5,7 +5,7 @@ const CACHE = "pwabuilder-offline-page";
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
 
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
-const offlineFallbackPage = "../../index.php";
+const offlineFallbackPage = "../../index.html";
 
 self.addEventListener("message", (event) => {
     if (event.data && event.data.type === "SKIP_WAITING") {
@@ -31,9 +31,9 @@ workbox.routing.registerRoute(
     })
 );
 
-// Alteração para salvar os arquivos media.php, index.php, menu.html e footer.html
+// Alteração para salvar os arquivos media.html, index.html, menu.html e footer.html
 workbox.routing.registerRoute(
-    /\/(media\.php|index\.php|menu\.html|footer\.html)/,
+    /\/(media\.html|index\.html|menu\.html|footer\.html)/,
     new workbox.strategies.NetworkFirst({
         cacheName: CACHE
     })
