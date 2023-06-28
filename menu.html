@@ -1,0 +1,65 @@
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="shortcut icon" sizes="512x512" href="assets/imgs/android/android-launchericon-512-512.png">
+<link rel="apple-touch-icon" href="assets/imgs/ios/1024.png">
+<meta name="theme-color" content="#09143c" />
+<!-- MENU -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css?v=260623-2">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@600&display=swap" rel="stylesheet">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="index.php">CalcMédia</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i style="color:#fff; font-size: 25px;" class="fa-solid fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.php">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Disciplinas
+                        </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="media.php?em=c1-bernardini">C1 - Bernardini</a>
+                    <a class="dropdown-item" href="media.php?em=c2-yoko">C2 - Yoko</a>
+                    <a class="dropdown-item" href="media.php?em=eda1-rose">EDA1 - Rose</a>
+                    <a class="dropdown-item" href="media.php?em=engecon-glauceny">Eng. Econômica - Glauceny</a>
+                    <a class="dropdown-item" href="media.php?em=ial-yoko">IAL - Yoko</a>
+                    <a class="dropdown-item" href="media.php?em=md1-edson">MD1 - Edson</a>
+                    <a class="dropdown-item" href="media.php?em=md1-glauco">MD1 - Glauco</a>
+                    <a class="dropdown-item" href="media.php?em=ped1-anderson">PED1 - Anderson</a>
+                    <a class="dropdown-item" href="media.php?em=ted1-renato">TED1 - Renato</a>
+                </div>
+            </li>
+            <li>
+                <button class="btn btn-primary" id="setup_button" onclick="installApp()"><i class="fa fa-download"></i> Instalar Web App</button>
+            </li>
+        </ul>
+        <form class="form-inline" style="display:inline-flex; margin-top: 10px;">
+            <input class="form-control mr-sm-2 search-input" type="search" placeholder="Pesquisar por disciplinas..." id="search-input" aria-label="Search">
+            <button id="search-button" class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+</nav>
+
+
+<!-- Modal -->
+<div class="modal fade" id="resultadosModal" tabindex="-1" role="dialog" aria-labelledby="resultadosModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Resultados</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+            </div>
+            <div class="modal-body" id="search-results">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="assets/js/pesquisa.js?v=270523"></script>
