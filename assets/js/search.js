@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function enviaDisciplina(url) {
         var valor = url;
-        var urlDestino = "media.html?em=" + encodeURIComponent(valor);
+        var urlDestino = "media.php?em=" + encodeURIComponent(valor);
         window.location.href = urlDestino;
     }
 });

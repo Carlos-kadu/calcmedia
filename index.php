@@ -57,7 +57,7 @@
     <script src="assets/js/countdown.js?v=090323"></script>
     <script src="assets/js/pwabuilder-sw.js"></script>
     <script src="assets/js/script.js?v=250623"></script>
-    <script src="assets/js/search.js"></script>
+    <script src="assets/js/"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
