@@ -127,6 +127,8 @@ if (disciplina) {
             var notaElemento = document.getElementById(`nota${i}_p`);
             notaElemento.innerHTML = `Nota ${disciplina.nomeCampos[i-1]}: <input type="number" value="${notas[i-1]}" id="nota${i}"> &#x1F4BE`;
         }
+} else {
+    window.location.href = "index.php";
 }
 
 function calcularMedia() {

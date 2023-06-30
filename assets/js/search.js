@@ -55,12 +55,12 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault();
         searchResults.innerHTML = '';
         modalBody.innerHTML = '';
-        const searchTerm = searchInput.value.toLowerCase();
-        let hasResults = false;
+        const termoPesquisa = searchInput.value.toLowerCase();
+        let haResultados = false;
 
-        if (searchTerm.length >= 2) {
+        if (termoPesquisa.length >= 2) {
             data.forEach(function(item) {
-                if (item.tags.some(tag => tag.includes(searchTerm))) {
+                if (item.tags.some(tag => tag.includes(termoPesquisa))) {
                     const result = document.createElement('p');
                     result.textContent = item.name;
                     result.classList.add('resultados-pesquisa');
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         enviaDisciplina(item.url);
                     });
                     searchResults.appendChild(result);
-                    hasResults = true;
+                    haResultados = true;
                 }
             });
         } else {
@@ -77,10 +77,10 @@ document.addEventListener('DOMContentLoaded', function() {
             modalBody.appendChild(minCharsMessage);
         }
 
-        if (!hasResults && searchTerm.length >= 2) {
-            const noResults = document.createElement('p');
-            noResults.textContent = 'Nenhum resultado encontrado.';
-            modalBody.appendChild(noResults);
+        if (!haResultados && termoPesquisa.length >= 2) {
+            const semResultados = document.createElement('p');
+            semResultados.textContent = 'Nenhum resultado encontrado.';
+            modalBody.appendChild(semResultados);
         }
 
         $('#resultadosModal').modal('show');
