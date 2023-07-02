@@ -192,9 +192,16 @@ function calcularMediaListasYoko() {
 
     var notas = notasTexto.split(';').map(nota => Number(nota.trim()));
 
-    // Calcula a média excluindo a menor nota
+    // Encontra a menor nota
     var menorNota = Math.min(...notas);
-    var notasSemMenor = notas.filter(nota => Number(nota) !== menorNota);
+
+    // Encontra o índice da primeira ocorrência da menor nota
+    var indiceMenorNota = notas.findIndex(nota => nota === menorNota);
+
+    // Cria um novo array sem a primeira ocorrência da menor nota
+    var notasSemMenor = notas.slice(0, indiceMenorNota).concat(notas.slice(indiceMenorNota + 1));
+
+    // Calcula a média excluindo a menor nota
     var mediaSemMenor = notasSemMenor.reduce((a, b) => a + b, 0) / notasSemMenor.length;
 
     // Calcula a média incluindo a menor nota
@@ -208,6 +215,7 @@ function calcularMediaListasYoko() {
     localStorage.setItem(`media_sem_menor_${disciplina.id}`, mediaSemMenor.toFixed(2));
     localStorage.setItem(`media_com_menor_${disciplina.id}`, mediaComMenor.toFixed(2));
 }
+
 
 
 window.addEventListener('DOMContentLoaded', function() {
