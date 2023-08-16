@@ -1,5 +1,5 @@
-var startDate = new Date("Mar 28, 2023 08:00:00").getTime();
-var endDate = new Date("jul 25, 2023 22:30:00").getTime();
+var startDate = new Date("Aug 25, 2023 08:03:00").getTime();
+var endDate = new Date("Dec 23, 2023 22:30:00").getTime();
 var totalTime = endDate - startDate;
 
 var x = setInterval(function() {
@@ -19,9 +19,11 @@ var x = setInterval(function() {
 
     document.getElementById("progress-bar").style.width = progressBarWidth + "%";
 
-    if (now > endDate) {
+    if (now > endDate || now < startDate) {
         clearInterval(x);
         document.getElementById("bigtext").innerHTML = "FIM DO SEMESTRE <div id='counter'>Boas férias!</div>";
         document.getElementById("progress-bar").style.width = "100%";
     }
+    window.alert(now)
+    window.alert(startDate)
 }, 1000);
