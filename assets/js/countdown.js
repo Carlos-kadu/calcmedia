@@ -24,6 +24,4 @@ var x = setInterval(function() {
         document.getElementById("bigtext").innerHTML = "FIM DO SEMESTRE <div id='counter'>Boas férias!</div>";
         document.getElementById("progress-bar").style.width = "100%";
     }
-    window.alert(now)
-    window.alert(startDate)
 }, 1000);
