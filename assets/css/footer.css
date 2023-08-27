@@ -1,3 +1,20 @@
+:root {
+    --primary-color-bg: #111111;
+    --primary-color-txt: #ffffff;
+    --primary-color-azul-1: #09143c;
+    --primary-color-azul-2: #0068b4;
+    --primary-color-painel: #1c1c1c;
+}
+
+.light-mode {
+    --primary-color-bg: #fcfcfc;
+    --primary-color-txt: #000000;
+    --primary-color-azul-1: #22abfa;
+    --primary-color-azul-2: #0c94e3;
+    --primary-color-painel: #22abfa;
+}
+
+
 /*FOOTER*/
 
 
@@ -664,7 +681,7 @@
 }
 
 #myFooter {
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: var(--primary-color-azul-1);
     color: white;
     padding-top: 30px;
 }

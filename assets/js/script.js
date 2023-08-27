@@ -90,6 +90,16 @@ var disciplinas = {
         "dividePor": 10,
         "ultimaAtualizacao": "2022.2"
     },
+    "md2-bernardini": {
+        "id": 10,
+        "nome": "MD2 - Bernardini",
+        "qtdCampos": 3,
+        "nomeCampos": ["P1", "P2", "P3"],
+        "pesos": [3, 3, 4],
+        "mediaAprovacao": 5,
+        "dividePor": 10,
+        "ultimaAtualizacao": "2023.2"
+    },
 };
 
 // Recebe da caixa de pesquisa na tela inicial a variável que define a disciplina 

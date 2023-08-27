@@ -10,6 +10,11 @@ document.addEventListener('DOMContentLoaded', function() {
             tags: ['cálculo', 'bernardini', 'c1']
         },
         {
+            name: 'Matemática Discreta 2 - Bernardini',
+            url: 'md2-bernardini',
+            tags: ['matemática discreta', 'bernardini', 'md2']
+        },
+        {
             name: 'Eng. Econômica - Glauceny',
             url: 'engecon-glauceny',
             tags: ['engecon', 'engenharia econômica', 'glauceny', 'econômica', 'engenharia', 'ee']
