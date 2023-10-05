@@ -68,7 +68,7 @@ var disciplinas = {
         "pesos": [4, 6],
         "mediaAprovacao": 5,
         "dividePor": 10,
-        "ultimaAtualizacao": "2023.1"
+        "ultimaAtualizacao": "2023.2"
     },
     "ped1-anderson": {
         "id": 8,
@@ -100,9 +100,30 @@ var disciplinas = {
         "dividePor": 10,
         "ultimaAtualizacao": "2023.2"
     },
+    "fac-john": {
+        "id": 11,
+        "nome": "FAC - John Lenon",
+        "qtdCampos": 4,
+        "nomeCampos": ["AS1", "AS2", "AS3", "MF"],
+        "pesos": [0.85, 0.85, 0.85, 0.15 * 3],
+        "mediaAprovacao": 5,
+        "dividePor": 3,
+        "ultimaAtualizacao": "2023.2"
+    },
+    "eda1-nilton": {
+        "id": 12,
+        "nome": "EDA1 - Nilton",
+        "qtdCampos": 3,
+        "nomeCampos": ["P1", "P2", "P3"],
+        "pesos": [1, 2, 3],
+        "mediaAprovacao": 5,
+        "dividePor": 6,
+        "ultimaAtualizacao": "2023.1"
+
+    },
 };
 
-// Recebe da caixa de pesquisa na tela inicial a variável que define a disciplina 
+// Recebe da caixa de pesquisa ou via menu a variável que define a disciplina 
 var urlParams = new URLSearchParams(window.location.search);
 var valorRecebido = urlParams.get('em');
 // window.alert(valorRecebido);

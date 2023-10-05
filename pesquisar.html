@@ -9,12 +9,8 @@
     <script src="https://kit.fontawesome.com/c221e013ed.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8" />
     <link rel="shortcut icon" sizes="512x512" href="assets/imgs/icon-512x512.png">
-    <title id="disciplina-title"></title>
+    <title>Pesquisar por disciplinas</title>
     <style>
-        #painel-calc-extras {
-            display: none;
-        }
-        
         #loader {
             position: fixed;
             z-index: 99999;
@@ -37,36 +33,28 @@
 
     <div id="menu"></div>
     <header>
-        <p class="txt-header">Calcule a sua média em: <span id="disciplina-name"></span></p>
+        <p class="txt-header">Pesquisar por disciplinas</p>
         </div>
     </header>
-    <div class="painel-container">
-        <div class="painel" id="painel-calc-extras" style="text-align: left">
-            <div id="calculos-extras"></div>
-        </div>
-        <div class="painel" style="text-align: left">
-            <div class="painel-header">Insira as notas nos campos abaixo.</div>
-            <div class="painel-body">
-                <div id="div-campos" class="modal-body"></div>
-                <p class="txt-white" id="resultado" style="font-weight: bold; margin-bottom: 0px; text-align: center;">
-                </p>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" style="margin:-10px" onclick="calcularMedia()">Calcular</button>
-                </div>
-                <p class="txt-white" id="atualizacao" style="opacity: 0.8;font-weight: normal;font-style: italic;">
-                    Última atualização em:
-                </p>
-                <p class="txt-white" id="mediaAprovacao" style="margin-top: -20px;opacity: 0.8;font-weight: normal;font-style: italic;">
-                    Média mínima para aprovação:
-                </p>
+
+    <form class="form-inline" style="display:block; margin-top: 50px; text-align:center; border-radius:30px">
+        <input class="form-control mr-sm-2 search-input" style="width: 70%;" type="search" placeholder="Pesquisar por disciplinas..." id="search-input" aria-label="Search">
+        <button id="search-button" class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+    </form>
+
+    <div class="painel-container" style="margin-top: 50px; margin-bottom:50px; color:#fff">
+        <div class="painel">
+            <div class="painel-header">Resultados da busca:</div>
+            <div class="modal-body" id="search-results">
             </div>
         </div>
     </div>
+
     <div id="footer"></div>
+
     <script src="assets/js/pwabuilder-sw.js"></script>
-    <script src="assets/js/script.js?v=041023"></script>
     <script src="assets/js/menu-footer-mode.js"></script>
-    <script src="assets/js/pwa-button.js"></script>
+    <script src="assets/js/search.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
