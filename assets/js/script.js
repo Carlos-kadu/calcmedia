@@ -118,7 +118,7 @@ var disciplinas = {
         "pesos": [1, 2, 3],
         "mediaAprovacao": 5,
         "dividePor": 6,
-        "ultimaAtualizacao": "2023.1"
+        "ultimaAtualizacao": "2023.2"
 
     },
 };
