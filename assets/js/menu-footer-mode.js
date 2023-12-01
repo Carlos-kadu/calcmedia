@@ -29,10 +29,8 @@ const includeHTML = (path, targetElementId) => {
 //INCLUI O MENU
 includeHTML('menu.html', 'menu')
     .then(() => {
-        // Obtém o elemento do campo de pesquisa
         var searchInput = document.getElementById('search-input');
 
-        // Evento de tecla enter no campo de pesquisa
         searchInput.addEventListener('keydown', function(event) {
             if (event.keyCode === 13) {
                 event.preventDefault();
@@ -43,7 +41,6 @@ includeHTML('menu.html', 'menu')
             }
         });
 
-        // Obtém o elemento do botão de pesquisa
         var searchButton = document.getElementById('search-button');
 
         searchButton.addEventListener('click', function() {
