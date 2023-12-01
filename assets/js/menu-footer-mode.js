@@ -32,7 +32,7 @@ includeHTML('menu.html', 'menu')
         var searchInput = document.getElementById('search-input');
 
         searchInput.addEventListener('keydown', function(event) {
-            if (event.keyCode === 13) {
+            if (event.key === 'Enter') {
                 event.preventDefault();
 
                 // Obtém o valor e redireciona para a página de pesquisa
