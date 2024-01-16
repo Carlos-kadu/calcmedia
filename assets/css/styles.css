@@ -1,9 +1,10 @@
 :root {
-    --primary-color-bg: #111111;
+    --primary-color-bg: #222222;
     --primary-color-txt: #ffffff;
     --primary-color-azul-1: #09143c;
     --primary-color-azul-2: #0068b4;
     --primary-color-painel: #1c1c1c;
+    --primary-color-txt-2: #bbbbbb;
 }
 
 .light-mode {
@@ -11,7 +12,7 @@
     --primary-color-txt: #000000;
     --primary-color-azul-1: #22abfa;
     --primary-color-azul-2: #0c94e3;
-    --primary-color-painel: #22abfa;
+    --primary-color-painel: #f0f0f0;
 }
 
 * {
@@ -29,16 +30,17 @@ body {
 header {
     margin-top: 55px;
     text-align: center;
-    margin-bottom: 20px;
-    padding: 40px;
+    margin-bottom: -16px;
     color: #fff;
     background: var(--primary-color-azul-1)
 }
 
 .txt-header {
-    font-size: 30px;
+    font-size: 45px;
     text-align: left;
     margin-left: 8%;
+    font-family: 'Poppins';
+    padding: 20px;
 }
 
 .painel-container {
@@ -239,14 +241,21 @@ col footer {
     .submit-line {
         width: 50vw;
     }
+    .disciplinas {
+        min-width: 330px;
+    }
 }
 
 @media(max-width: 800px) {
+    .coluna-disciplinas {
+        padding-right: 0px!important;
+        padding-left: 0px!important;
+    }
     header {
         padding: 20px;
     }
     .txt-header {
-        font-size: 25px;
+        font-size: 30px;
         margin-left: 0%;
     }
     .painel {
@@ -331,4 +340,54 @@ col footer {
     border-color: var(--primary-color-azul-2);
     transform: scale(1.1);
     transition: .3s;
+}
+
+
+/**/
+
+.disciplinas {
+    background: var(--primary-color-painel);
+    padding: 15px;
+    border-radius: 20px;
+    margin: 10px auto;
+    max-width: 330px;
+    text-align: center;
+    color: var(--primary-color-txt);
+}
+
+.img-disciplinas {
+    width: 50px;
+    border-radius: 10px;
+}
+
+.descricao-disciplinas {
+    text-align: left;
+    color: var(--primary-color-txt-2);
+    font-style: italic;
+    font-size: 15px;
+    padding: 0px;
+    margin: 0;
+    margin-top: -5px;
+}
+
+.mb-1 {
+    font-family: 'Poppins';
+    font-size: 18px!important;
+    text-align: left;
+}
+
+.links-disciplinas {
+    text-decoration: none;
+    /* color: var(--primary-color-azul-2); */
+    text-align: left!important;
+}
+
+.links-disciplinas:hover {
+    transition: .4s;
+    color: var(--primary-color-azul-2);
+}
+
+.imgs-sobre-icon {
+    padding: 10px;
+    max-height: 100px;
 }

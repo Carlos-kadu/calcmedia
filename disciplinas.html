@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta name="description" content="Calcule a sua média, ou faça simulações de quais podem ser as suas notas.">
+    <meta name="author" content="CalCMedia">
+    <link rel="alternate" href="" hreflang="pt-br" />
+    <meta name="robots" content="index, follow">
+    <meta property="og:image" content="assets/imgs/android/android-launchericon-512-512.png" />
+    <link rel="canonical" href="https://carlos-kadu.github.io/calcmedia/" />
+    <meta property="og:type" content="website" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link crossorigin="use-credentials" rel="manifest" href="assets/manifest.json" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/c221e013ed.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" sizes="512x512" href="assets/imgs/icon-512x512.png">
+    <title>Calculadora de Médias</title>
+    <style>
+        #loader {
+            position: fixed;
+            z-index: 99999;
+            background: #09143c;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loader">
+        <div class="spinner-border text-white" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+    <div id="menu"></div>
+
+    <header>
+        <p class="txt-header">Disciplinas disponíveis</p>
+    </header>
+    <div class="txt-body">
+        <p>Não encontrou a disciplina que queria ou ela está desatualizada? Fique à vontade para contribuir! Este é o nosso
+            <a href="https://github.com/Carlos-kadu/calcmedia" target="blank">
+                repositório.
+            </a>
+        </p>
+    </div>
+
+    <div class="container coluna-disciplinas">
+        <div class="row" id="disciplinas-container">
+        </div>
+    </div>
+
+
+    <div id="footer"></div>
+
+    <script>
+        // Função para gerar a string HTML de disciplina
+        function gerarHTMLDisciplina(disciplina) {
+            return `
+        <div class="col-sm coluna-disciplinas">
+            <div class="disciplinas">
+                <div class="media">
+                    <img class="align-self-center mr-3 img-disciplinas" src="assets/imgs/icone-disciplinas.png" alt="icone disciplinas">
+                    <div class="media-body">
+                        <h5 class="mt-0 mb-1">${disciplina.nome}</h5>
+                        <p class="descricao-disciplinas">Última atualização em: ${disciplina.ultimaAtualizacao}</p>
+                        <a href="media.html?em=${disciplina.url}">
+                            <p class="links-disciplinas"><i class="fa-solid fa-calculator"></i> Simular média</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+        }
+
+        // Encontrar o elemento onde você deseja adicionar as disciplinas (por exemplo, um elemento com o id "disciplinas-container")
+        var disciplinasContainer = document.getElementById("disciplinas-container");
+
+        // Fazer uma solicitação fetch para obter o JSON do arquivo
+        fetch('assets/json/disciplinas.json')
+            .then(response => response.json())
+            .then(disciplinas => {
+                // Iterar sobre as disciplinas no JSON
+                for (var key in disciplinas) {
+                    if (disciplinas.hasOwnProperty(key)) {
+                        var disciplina = disciplinas[key];
+                        // Chamar a função para gerar a string HTML da disciplina
+                        var htmlDisciplina = gerarHTMLDisciplina(disciplina);
+                        // Adicionar a string HTML ao elemento pai usando innerHTML
+                        disciplinasContainer.innerHTML += htmlDisciplina;
+                    }
+                }
+            })
+            .catch(error => console.error('Erro ao carregar disciplinas.json:', error));
+    </script>
+
+    <script src="assets/js/menu-footer-mode.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
