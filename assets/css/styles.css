@@ -247,16 +247,14 @@ col footer {
 }
 
 @media(max-width: 800px) {
-    .coluna-disciplinas {
-        padding-right: 0px!important;
-        padding-left: 0px!important;
-    }
     header {
         padding: 20px;
+        margin-bottom: 20px;
     }
     .txt-header {
         font-size: 30px;
         margin-left: 0%;
+        padding: 0px;
     }
     .painel {
         width: 400px;
@@ -346,7 +344,8 @@ col footer {
 /**/
 
 .disciplinas {
-    background: var(--primary-color-painel);
+    background: linear-gradient(45deg, #09143c, transparent);
+    border: 1px solid #09143c;
     padding: 15px;
     border-radius: 20px;
     margin: 10px auto;

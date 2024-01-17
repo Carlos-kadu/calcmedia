@@ -2,7 +2,7 @@
 fetch('assets/json/disciplinas.json')
     .then(response => response.json())
     .then(data => {
-        // Recebe da caixa de pesquisa ou via menu a variável que define a disciplina 
+        // Pega da url a variável que define a disciplina 
         var urlParams = new URLSearchParams(window.location.search);
         var valorRecebido = urlParams.get('em');
         // window.alert(valorRecebido);
@@ -38,18 +38,20 @@ fetch('assets/json/disciplinas.json')
                     notaElemento.innerHTML = `Nota ${disciplina.nomeCampos[i-1]}: <input type="number" value="${notas[i-1]}" id="nota${i}"> &#x1F4BE`;
                 }
             }
+
+            console.log(disciplina)
+            document.getElementById('calcularMediaButton').addEventListener('click', function() {
+                calcularMedia(disciplina);
+            });
+
         } else {
             window.location.href = "index.html";
         }
     })
     .catch(error => console.error('Erro ao carregar disciplinas:', error));
 
-// Recebe da caixa de pesquisa ou via menu a variável que define a disciplina 
-var urlParams = new URLSearchParams(window.location.search);
-var valorRecebido = urlParams.get('em');
-var disciplina = disciplinas[valorRecebido];
-
-function calcularMedia() {
+function calcularMedia(disciplina) {
+    console.log(disciplina)
     var notas = [];
     for (var i = 1; i <= disciplina.qtdCampos; i++) {
         var nota = document.getElementById(`nota${i}`).value;

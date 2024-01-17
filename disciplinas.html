@@ -66,7 +66,7 @@
         <div class="col-sm coluna-disciplinas">
             <div class="disciplinas">
                 <div class="media">
-                    <img class="align-self-center mr-3 img-disciplinas" src="assets/imgs/icone-disciplinas.png" alt="icone disciplinas">
+                    
                     <div class="media-body">
                         <h5 class="mt-0 mb-1">${disciplina.nome}</h5>
                         <p class="descricao-disciplinas">Última atualização em: ${disciplina.ultimaAtualizacao}</p>
@@ -80,20 +80,17 @@
     `;
         }
 
-        // Encontrar o elemento onde você deseja adicionar as disciplinas (por exemplo, um elemento com o id "disciplinas-container")
         var disciplinasContainer = document.getElementById("disciplinas-container");
 
-        // Fazer uma solicitação fetch para obter o JSON do arquivo
         fetch('assets/json/disciplinas.json')
             .then(response => response.json())
             .then(disciplinas => {
                 // Iterar sobre as disciplinas no JSON
-                for (var key in disciplinas) {
-                    if (disciplinas.hasOwnProperty(key)) {
-                        var disciplina = disciplinas[key];
+                for (var i in disciplinas) {
+                    if (disciplinas.hasOwnProperty(i)) {
+                        var disciplina = disciplinas[i];
                         // Chamar a função para gerar a string HTML da disciplina
                         var htmlDisciplina = gerarHTMLDisciplina(disciplina);
-                        // Adicionar a string HTML ao elemento pai usando innerHTML
                         disciplinasContainer.innerHTML += htmlDisciplina;
                     }
                 }
