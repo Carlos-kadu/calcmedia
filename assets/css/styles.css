@@ -344,8 +344,7 @@ col footer {
 /**/
 
 .disciplinas {
-    background: linear-gradient(45deg, #09143c, transparent);
-    border: 1px solid #09143c;
+    background: var(--primary-color-painel);
     padding: 15px;
     border-radius: 20px;
     margin: 10px auto;
