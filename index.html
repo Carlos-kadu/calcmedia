@@ -17,11 +17,20 @@
     <meta charset="UTF-8" />
     <link rel="shortcut icon" sizes="512x512" href="assets/imgs/icon-512x512.png">
     <title>Calculadora de Médias</title>
+
     <style>
+         :root {
+            --color-azul-1: #09143c;
+        }
+        
+        .light-mode {
+            --color-azul-1: #007bff;
+        }
+        
         #loader {
             position: fixed;
             z-index: 99999;
-            background: #09143c;
+            background: var(--color-azul-1);
             width: 100%;
             height: 100%;
             display: flex;
@@ -43,7 +52,7 @@
     <header>
         <p class="txt-header">Simule sua média</p>
     </header>
-    <div class="txt-body">
+    <div class="txt-body" style="padding: 0px;margin: 40px 5%;">
         <p>Para simular sua média, basta selecionar uma das disciplinas disponíveis <a href="disciplinas.html">aqui</a> ou procurar através da caixa de pesquisa. </p>
     </div>
     <div class="painel-container" style="margin-top:5%">
@@ -60,12 +69,12 @@
             </div>
         </div>
         <div class="painel" style="text-align: left;">
-            <div class="painel-header">📅 Calendário Acadêmico para 2024:</div>
+            <div class="painel-header txt-body" style="font-weight: bold;">📅 Calendário Acadêmico 2024.1:</div>
             <div class="painel-body">
                 <p>
-                    <a href="https://saa.unb.br/images/documentos/graduacao/Calendarios/Atividades/2024_1/2024_1_Calend_Ativ_Grad_09_01_24.pdf" target="_blank"><i class="fa-solid fa-link"></i> Calendário 2024.1</a>
+                    <a href="https://saa.unb.br/images/documentos/graduacao/Calendarios/Atividades/2024_1/2024_1_Calend__Ativ__Grad__18_01_2024.pdf" target="_blank"><i class="fa-solid fa-link"></i> Calendário 2024.1</a>
                 </p>
-                <p class="txt-white" style="font-weight: normal;">
+                <p class="txt-body" style="font-weight: normal;">
                     Verão 2024: de 08/01/2024 até 10/02/2024 (30 dias)<br>2024.1: de 18/03/2024 até 15/07/2024 (100 dias)<br>2024.2: de 19/08/2024 até 17/12/2024 (100 dias)<br> Verão 2025: de 06/01/2025 até 08/02/2025 (30 dias)
                 </p>
             </div>

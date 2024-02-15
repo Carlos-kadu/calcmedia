@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta name="description" content="Calcule a sua média, ou faça simulações de quais podem ser as suas notas.">
+    <meta name="author" content="CalCMedia">
+    <link rel="alternate" href="" hreflang="pt-br" />
+    <meta name="robots" content="index, follow">
+    <meta property="og:image" content="assets/imgs/android/android-launchericon-512-512.png" />
+    <link rel="canonical" href="https://carlos-kadu.github.io/calcmedia/" />
+    <meta property="og:type" content="website" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link crossorigin="use-credentials" rel="manifest" href="assets/manifest.json" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/c221e013ed.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" sizes="512x512" href="assets/imgs/icon-512x512.png">
+    <title>Como adicionar/atualizar disciplinas</title>
+    <link href="assets/css/prism.css" rel="stylesheet" />
+    <script src="assets/js/prism.js"></script>
+    <style>
+         :root {
+            --color-azul-1: #09143c;
+        }
+        
+        .light-mode {
+            --color-azul-1: #007bff;
+        }
+        
+        #loader {
+            position: fixed;
+            z-index: 99999;
+            background: var(--color-azul-1);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .passos {
+            font-size: 20px;
+            font-family: poppins;
+            font-weight: 600
+        }
+        
+        pre {
+            margin: auto!important;
+            border-radius: 10px;
+            margin-bottom: 20px!important;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loader">
+        <div class="spinner-border text-white" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+    <div id="menu"></div>
+
+    <header>
+        <p class="txt-header">Como adicionar/atualizar disciplinas</p>
+    </header>
+
+    <div class="txt-body" style="padding: 0px;margin: 40px 8%;">
+        <p style="text-align:center; padding:10px">Se não encontrou a disciplina que estava procurando, ou ela está desatualizada, siga o tutorial abaixo para saber como você deve proceder. <br>⚠️ Melhor visualização no modo claro.
+            <a href="https://github.com/Carlos-kadu/calcmedia/blob/main/readme.md#tutorial-para-execu%C3%A7%C3%A3o-local" target="blank">
+            🔗 Tutorial para execução local
+        </a>
+        </p><br>
+
+
+
+        <h3 class="passos">1: Fork do Repositório</h3>
+        <p>Comece fazendo um fork do repositório original para o seu próprio perfil no Github.
+        </p>
+        <h3 class="passos">2: Clone do Repositório</h3>
+        <p>Clone o repositório forked para sua máquina local usando o seguinte comando no terminal:</p>
+        <pre><code class="language-git txt-body">git clone https://github.com/seu-username/nome-do-repositorio.git</code></pre>
+
+        <h3 class="passos">3: Edição do Arquivo disciplinas.json</h3>
+        <p>Abra o arquivo assets/json/disciplinas.json e adicione uma nova entrada seguindo o padrão fornecido. Por exemplo:</p>
+        <pre><code class="language-json">
+        {
+        "c2-yoko": {
+            "id": 2,
+            "url": "c2-yoko",
+            "nome": "C2 - Yoko",
+            "qtdCampos": 4,
+            "nomeCampos": ["P1", "P2", "P3", "NE"],
+            "pesos": [0.7, 0.7, 0.7, 0.9],
+            "mediaAprovacao": 5,
+            "dividePor": 3,
+            "ultimaAtualizacao": "2023.1"
+        },
+        }
+        </code></pre>
+
+        <p>
+            ⚠️ Se necessário, devido as limitações do projeto, ajuste a fórmula de cálculo da média para a nova disciplina. Note que o script irá fazer as multiplicações dos valores inseridos pelo usuário pelos respectivos pesos (disponíveis no campo "pesos" separados
+            por vírgula. Ex: "pesos": [0.7, 0.7, 0.7, 0.9]). Em seguida será feita a soma dos valores e posteriormente a divisão (O divisor é informado no campo "dividePor". Ex: "dividePor": 3).</p>
+        <p>
+            Uma média dada pela fórmula:
+            <img style="height: 50px; border-radius:10px; filter: invert(1)" src="assets/imgs/ex-formula1.png">, deve ser manipulada (colocar um denominador comum. MMC) para que chegue em algo como:<img style="height: 50px; border-radius:10px; filter:invert(1)"
+                src="assets/imgs/ex-formula2.png">.
+        </p>
+        <p>
+            Certifique-se de ajustar o id e a url para garantir unicidade e conformidade com o padrão.
+        </p>
+
+        <h3 class="passos">5: Atualização do Arquivo search.js</h3>
+        <p>Abra o arquivo assets/js/search.js e adicione uma nova entrada para a disciplina. Por exemplo:</p>
+
+        <pre><code class="language-js">
+            {
+                name: 'Cálculo 2 - Yoko',
+                url: 'c2-yoko',
+                tags: ['cálculo', 'yoko', 'c2']
+            },
+        </code></pre>
+
+        <h3 class="passos">6: Realizar Testes</h3>
+        <p>
+            Não esqueça de realizar seus testes para checar o bom funcionamento das suas alterações.
+        </p>
+
+        <h3 class="passos">7: Commit e Push das Alterações</h3>
+        <p>
+            Depois de realizar as alterações, adicione, realize o commit e faça o push para o seu repositório no Git.
+        </p>
+        <h3 class="passos">8: Pull Request</h3>
+        <p>
+            Finalmente, vá para o Git e crie um Pull Request para contribuir com as suas alterações de volta para o repositório original. Suas alterações serão revisadas e, se tudo estiver correto, a nova disciplina será incorporada ao projeto.
+        </p>
+    </div>
+
+
+    <div id="footer"></div>
+    <script src="assets/js/menu-footer-mode.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -11,6 +11,14 @@
     <link rel="shortcut icon" sizes="512x512" href="assets/imgs/icon-512x512.png">
     <title id="disciplina-title"></title>
     <style>
+         :root {
+            --color-azul-1: #09143c;
+        }
+        
+        .light-mode {
+            --color-azul-1: #007bff;
+        }
+        
         #painel-calc-extras {
             display: none;
         }
@@ -18,7 +26,7 @@
         #loader {
             position: fixed;
             z-index: 99999;
-            background: #09143c;
+            background: var(--color-azul-1);
             width: 100%;
             height: 100%;
             display: flex;
@@ -45,18 +53,18 @@
             <div id="calculos-extras"></div>
         </div>
         <div class="painel" style="text-align: left">
-            <div class="painel-header">Insira as notas nos campos abaixo.</div>
+            <div class="painel-header txt-body" style="font-weight: bold;">Insira as notas nos campos abaixo.</div>
             <div class="painel-body">
                 <div id="div-campos" class="modal-body"></div>
-                <p class="txt-white" id="resultado" style="font-weight: bold; margin-bottom: 0px; text-align: center;">
+                <p class="txt-body" id="resultado" style="font-weight: bold; margin-bottom: 0px; text-align: center;">
                 </p>
                 <div class="modal-footer">
                     <button type="button" id="calcularMediaButton" class="btn btn-primary" style="margin:-10px">Calcular</button>
                 </div>
-                <p class="txt-white" id="atualizacao" style="opacity: 0.8;font-weight: normal;font-style: italic;">
+                <p class="txt-body" id="atualizacao" style="opacity: 0.8;font-weight: normal;font-style: italic;">
                     Última atualização em:
                 </p>
-                <p class="txt-white" id="mediaAprovacao" style="margin-top: -20px;opacity: 0.8;font-weight: normal;font-style: italic;">
+                <p class="txt-body" id="mediaAprovacao" style="margin-top: -20px;opacity: 0.8;font-weight: normal;font-style: italic;">
                     Média mínima para aprovação:
                 </p>
             </div>

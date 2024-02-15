@@ -11,10 +11,18 @@
     <link rel="shortcut icon" sizes="512x512" href="assets/imgs/icon-512x512.png">
     <title>Pesquisar por disciplinas</title>
     <style>
+         :root {
+            --color-azul-1: #09143c;
+        }
+        
+        .light-mode {
+            --color-azul-1: #007bff;
+        }
+        
         #loader {
             position: fixed;
             z-index: 99999;
-            background: #09143c;
+            background: var(--color-azul-1);
             width: 100%;
             height: 100%;
             display: flex;
@@ -37,14 +45,14 @@
         </div>
     </header>
 
-    <form class="form-inline" style="display:block; margin-top: 50px; text-align:center; border-radius:30px">
-        <input class="form-control mr-sm-2 search-input" style="width: 70%;" type="search" placeholder="Pesquisar por disciplinas..." id="search-input" aria-label="Search">
-        <button id="search-button" class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+    <form class="form-inline" style="width: 70%; margin: 50px auto;">
+        <input class="form-control mr-sm-2 search-input" style="border: 1px solid var(--color-azul-2)!important; color: var(--color-txt)!important;" type="search" placeholder="Pesquisar por disciplinas..." id="search-input" aria-label="Search">
+        <button id="search-button" class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search" style="color: var(--color-txt);"></i></button>
     </form>
 
     <div class="painel-container" style="margin-top: 50px; margin-bottom:50px; color:#fff">
         <div class="painel">
-            <div class="painel-header">Resultados da busca:</div>
+            <div class="painel-header txt-body">Resultados da busca:</div>
             <div class="modal-body" id="search-results">
             </div>
         </div>

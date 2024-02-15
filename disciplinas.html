@@ -18,10 +18,18 @@
     <link rel="shortcut icon" sizes="512x512" href="assets/imgs/icon-512x512.png">
     <title>Calculadora de Médias</title>
     <style>
+         :root {
+            --color-azul-1: #09143c;
+        }
+        
+        .light-mode {
+            --color-azul-1: #007bff;
+        }
+        
         #loader {
             position: fixed;
             z-index: 99999;
-            background: #09143c;
+            background: var(--color-azul-1);
             width: 100%;
             height: 100%;
             display: flex;
@@ -43,10 +51,10 @@
     <header>
         <p class="txt-header">Disciplinas disponíveis</p>
     </header>
-    <div class="txt-body">
-        <p>Não encontrou a disciplina que queria ou ela está desatualizada? Fique à vontade para contribuir! Este é o nosso
-            <a href="https://github.com/Carlos-kadu/calcmedia" target="blank">
-                repositório.
+    <div class="txt-body" style="padding: 0px;margin: 40px 5%;">
+        <p>Não encontrou a disciplina que queria ou ela está desatualizada? Fique à vontade para contribuir!
+            <a href="como-adicionar-disciplinas.html">
+                Como adicionar/atualizar disciplinas.
             </a>
         </p>
     </div>

@@ -38,6 +38,9 @@ docker run -d -p 8080:80 -v ./:/usr/share/nginx/html calcmedia
 ```
 Acesse em um navegador digitando `http://localhost:8080`
 
+## Tutorial para adicionar/atualizar disciplinas
+https://carlos-kadu.github.io/calcmedia/como-adicionar-disciplinas.html
+
 ## Licença
 
 Este projeto está licenciado sob a [MIT License](LICENSE).

@@ -18,7 +18,7 @@ fetch('assets/json/disciplinas.json')
             // Insere a quantidade de campos necessários para notas
             var campos = document.getElementById("div-campos")
             for (var i = 1; i <= disciplina.qtdCampos; i++) {
-                campos.innerHTML += `<p class="txt-white" id="nota${i}_p">Nota ${disciplina.nomeCampos[i-1]}: <input type="number" id="nota${i}"></p>`;
+                campos.innerHTML += `<p class="txt-body" id="nota${i}_p">Nota ${disciplina.nomeCampos[i-1]}: <input type="number" id="nota${i}"></p>`;
             }
 
             // Se houver, recupera as notas do armazenamento local

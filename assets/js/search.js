@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const resultadosBusca = document.querySelector('#search-results');
     const modalBody = document.querySelector('.modal-body');
 
+    /* INSERIR NOVA DISCIPLINA ABAIXO */
     const data = [{
             name: 'Cálculo 1 - Bernardini',
             url: 'c1-bernardini',
@@ -67,6 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
             tags: ['fac', 'john', 'arquitetura', 'fundamentos', 'computadores']
         }
     ];
+    /* INSERIR NOVA DISCIPLINA ACIMA */
 
 
     function pesquisar(termoBusca) {
