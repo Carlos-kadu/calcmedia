@@ -47,6 +47,10 @@ fetch('assets/json/disciplinas.json')
         } else {
             window.location.href = "index.html";
         }
+        var media = localStorage.getItem(`${disciplina.id}_media`);
+        if (media) {
+            document.getElementById('resultado').innerHTML = media;
+        }
     })
     .catch(error => console.error('Erro ao carregar disciplinas:', error));
 
@@ -56,7 +60,8 @@ function calcularMedia(disciplina) {
     for (var i = 1; i <= disciplina.qtdCampos; i++) {
         var nota = document.getElementById(`nota${i}`).value;
         if (nota === "") {
-            window.alert('PREENCHA TODOS OS CAMPOS ANTES DE FINALIZAR!');
+            var modalAviso = new bootstrap.Modal(document.getElementById('modalAviso'));
+            modalAviso.show();
             return;
         }
         notas.push(Number(nota));
@@ -79,10 +84,4 @@ function calcularMedia(disciplina) {
     }
     localStorage.setItem(`${disciplina.id}_media`, media);
     document.getElementById('resultado').innerHTML = media + '<br><span class="save">Notas salvas no armazenamento local</span>';
-}
-
-// Recuperando a média do armazenamento local
-var media = localStorage.getItem(`${disciplina.id}_media`);
-if (media) {
-    document.getElementById('resultado').innerHTML = media;
 }

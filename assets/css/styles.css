@@ -123,6 +123,12 @@ header {
 .form-control {
     border-radius: 15px!important;
     border: 1px solid var(--bg-3)!important;
+    background: var(--color-painel)!important;
+    color: var(--color-txt)!important;
+}
+
+#nome_disciplina::placeholder {
+    color: var(--color-txt)!important;
 }
 
 .search-container {
@@ -157,15 +163,15 @@ header {
 
 .progress-bar-container {
     width: 100%;
-    height: 15px;
-    background-color: #f2f2f2;
-    border-radius: 6px;
+    height: 16px;
+    background-color: var(--color-bg);
+    border-radius: 25px;
 }
 
 .progress-bar {
     height: 100%;
-    background: #0068b4;
-    border-radius: 5px;
+    background: var(--color-azul-2);
+    border-radius: 24px;
     width: 0%;
     transition: width 0.5s;
 }
@@ -327,8 +333,8 @@ col footer {
     background-color: var(--color-painel);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
-    color: #FFF;
     border-radius: 10px!important;
+    color: var(--color-txt)!important;
 }
 
 .modal-footer {
@@ -351,6 +357,15 @@ col footer {
     background-color: var(--color-azul-2);
     border-color: var(--color-azul-2);
     border-radius: 20px;
+}
+
+.btn-secondary {
+    border-radius: 20px;
+}
+
+.btn-secondary:hover {
+    transform: scale(1.1);
+    transition: .3s;
 }
 
 .btn-primary:hover {
@@ -380,6 +395,22 @@ col footer {
 
 /**/
 
+.btn-3 {
+    border: none;
+    background: var(--color-azul-2);
+    border-radius: 33px;
+    padding: 1px 7px;
+    color: var(--color-txt);
+}
+
+.btn-3:hover {
+    transform: scale(1.1);
+    transition: .4s;
+}
+
+
+/**/
+
 .disciplinas {
     background: var(--color-painel);
     padding: 15px;
@@ -403,7 +434,8 @@ col footer {
     padding: 0px;
     margin: 0;
     margin-top: -5px;
-    font-weight: 500
+    font-weight: 500;
+    font-family: 'Poppins';
 }
 
 .mb-1 {

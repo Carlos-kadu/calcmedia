@@ -8,6 +8,7 @@ Este é um simples site em JavaScript e HTML que foi criado para ajudar no apren
 - Calcula a média ponderada das notas inseridas.
 - Informa se o aluno seria aprovado ou reprovado na disciplina, de acordo com a média mínima estabelecida e as notas fornecidas.
 - Salva as notas e médias no armazenamento local para uma possivél simulação posterior.
+- "Faltômetro" onde o usuário pode ter controle de faltas em uma disciplina.
 
 ## Contribuição
 
