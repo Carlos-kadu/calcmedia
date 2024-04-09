@@ -156,5 +156,17 @@
         "dividePor": 20,
         "ultimaAtualizacao": "2024.1"
 
+    },
+    "peae-marilia": {
+        "id": 15,
+        "url": "peae-marilia",
+        "nome": "PEAE - Marília",
+        "qtdCampos": 3,
+        "nomeCampos": ["P1", "P2", "P3"],
+        "pesos": [1.5, 2, 2.5],
+        "mediaAprovacao": 5,
+        "dividePor": 6,
+        "ultimaAtualizacao": "2024.1"
+
     }
 }

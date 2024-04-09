@@ -66,6 +66,11 @@ document.addEventListener('DOMContentLoaded', function() {
             name: 'Fundamentos de Arquitetura de Computadores',
             url: 'fac-john',
             tags: ['fac', 'john', 'arquitetura', 'fundamentos', 'computadores']
+        },
+        {
+            name: 'Probabilidade e Estatística aplicado à Engenharia',
+            url: 'peae-marilia',
+            tags: ['pe', 'peae', 'marilia', 'probabilidade']
         }
     ];
     /* INSERIR NOVA DISCIPLINA ACIMA */
