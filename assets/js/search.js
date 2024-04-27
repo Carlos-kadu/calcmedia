@@ -63,14 +63,26 @@ document.addEventListener('DOMContentLoaded', function() {
             tags: ['ped1', 'prática de eletrônica', 'digital', 'anderson', 'eletrônica']
         },
         {
-            name: 'Fundamentos de Arquitetura de Computadores',
+            name: 'Fundamentos de Arquitetura de Computadores - John',
             url: 'fac-john',
             tags: ['fac', 'john', 'arquitetura', 'fundamentos', 'computadores']
         },
         {
-            name: 'Probabilidade e Estatística aplicado à Engenharia',
+            name: 'Probabilidade e Estatística aplicado à Engenharia - Marília',
             url: 'peae-marilia',
             tags: ['pe', 'peae', 'marilia', 'probabilidade']
+        }
+        ,
+        {
+            name: 'Estrutura de dados e algoritmos 2 - John',
+            url: 'eda2-john',
+            tags: ['eda2', 'john', 'estrutura de dados', 'algoritmos']
+        }
+        ,
+        {
+            name: 'Compiladores - Bruno Ribas',
+            url: 'comp-ribas',
+            tags: ['ribas', 'compiladores', 'comp', 'bruno']
         }
     ];
     /* INSERIR NOVA DISCIPLINA ACIMA */

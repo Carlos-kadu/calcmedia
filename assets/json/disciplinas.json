@@ -168,5 +168,27 @@
         "dividePor": 6,
         "ultimaAtualizacao": "2024.1"
 
+    },
+    "eda2-john": {
+        "id": 16,
+        "url": "eda2-john",
+        "nome": "EDA2 - John Lenon",
+        "qtdCampos": 5,
+        "nomeCampos": ["AS1", "AS2", "AS3", "MF", "R"],
+        "pesos": [0.85, 0.85, 0.85, 0.45, 0.3],
+        "mediaAprovacao": 5,
+        "dividePor": 3,
+        "ultimaAtualizacao": "2024.1"
+    },
+    "comp-ribas": {
+        "id": 17,
+        "url": "comp-ribas",
+        "nome": "Compiladores - Bruno Ribas",
+        "qtdCampos": 4,
+        "nomeCampos": ["P1", "P2", "L", "T1"],
+        "pesos": [35, 49, 12, 24],
+        "mediaAprovacao": 5,
+        "dividePor": 120,
+        "ultimaAtualizacao": "2024.1"
     }
 }
