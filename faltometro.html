@@ -2,11 +2,13 @@
 <html lang="pt-br">
 
 <head>
-    <meta name="description" content="Calcule a sua média, ou faça simulações de quais podem ser as suas notas.">
-    <meta name="author" content="CalCMedia">
+    <meta property="og:title" content="CalcMédia :: Calculadora de Médias" />
+    <meta property="og:image" content="/assets/imgs/icon-512x512.png" />
+    <meta name="description" content="Monitore suas faltas de maneira fácil com o CalcMédia">
+    <meta name="author" content="CalcMédia">
     <link rel="alternate" href="" hreflang="pt-br" />
     <meta name="robots" content="index, follow">
-    <meta property="og:image" content="assets/imgs/android/android-launchericon-512-512.png" />
+    <meta property="og:url" content="https://carlos-kadu.github.io/calcmedia/faltometro.html" />
     <link rel="canonical" href="https://carlos-kadu.github.io/calcmedia/" />
     <meta property="og:type" content="website" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,12 +18,10 @@
     <script src="https://kit.fontawesome.com/c221e013ed.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8" />
     <link rel="shortcut icon" sizes="512x512" href="assets/imgs/icon-512x512.png">
-    <title>Faltômetro</title>
-    <link href="assets/css/prism.css" rel="stylesheet" />
-    <script src="assets/js/prism.js"></script>
+    <title>CalcMédia :: Faltômetro</title>
     <style>
          :root {
-            --color-azul-1: #09143c;
+            --color-azul-1: #0136af;
         }
         
         .light-mode {
@@ -68,9 +68,10 @@
 
     <div class="txt-body" style="padding: 0px;margin: 40px 8%;">
         <p>
-            Monte o seu faltômetro adicionando as disciplinas desejadas abaixo. Antes do uso recomenda-se a leitura do
-            <a href="#aviso">aviso</a> disponível no final da página.
-        </p>
+            Monte o seu faltômetro adicionando as disciplinas desejadas abaixo. Cada falta adicionada corresponderá a <strong style="color: var(--color-azul-2);">um dia que possui duas aulas </strong> (cenário comum). Verifique as políticas da universidade
+            para obter informações precisas e atualizadas sobre as consequências associadas ao excesso de faltas. Os dados inseridos aqui são salvos localmente no armazenamento do seu dispositivo, ao apagar os dados de armazenamento do site CalcMédia,
+            todas os dados serão removidos de forma irreversível.
+        </p><br>
         <div class="form-group">
             <label for="nome_disciplina">Nome da disciplina:</label>
             <input class="form-control" type="text" placeholder="Disciplina" id="nome_disciplina" name="nome_disciplina" aria-label="">
@@ -87,20 +88,6 @@
         <button class="btn btn-primary" onclick="addDisciplinaFaltometro()">Adicionar disciplina</button>
 
         <div class="row" style="padding: 50px 0px;" id="disciplinas_faltometro"></div>
-
-        <div id="aviso" style="background:var(--color-painel); padding:15px; border-radius:20px;">
-            <p>
-                ⚠️ Este faltômetro foi desenvolvido como uma ferramenta de simulação para auxiliar os estudantes na estimativa e controle de faltas em uma disciplina. Aqui consideramos o <strong style="color: var(--color-azul-2);">cenário comum
-                de duas aulas por dia</strong>, isto é, cada falta adicionada corresponderá a <strong style="color: var(--color-azul-2);">um dia ou duas faltas</strong>. Os dados inseridos aqui são salvos localmente no armazenamento do seu dispositivo,
-                se o usuário apagar localmente os dados de armazenamento do site CalcMédia, todas as informações referentes às simulações realizadas serão removidas de forma irreversível.
-            </p>
-            <p>
-                <em>
-                    "Segundo as normas vigentes do regulamento de graduação, o aluno será considerado aprovado, no que diz respeito à assiduidade, se satisfizer a qualquer uma das duas condições a seguir: - Tiver presença
-                    em um número de aulas igual ou superior a 75.0% da carga horária do componente curricular. - Tiver presença em 75.0% ou mais das aulas ministradas (o professor deve lançar 90% da frequência)."
-                </em> <br>Verifique as políticas da universidade para obter informações precisas e atualizadas sobre as consequências associadas ao excesso de faltas.
-            </p>
-        </div>
     </div>
 
 

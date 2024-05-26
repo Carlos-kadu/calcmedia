@@ -4,12 +4,13 @@
 /**/
 
 :root {
-    --color-bg: #222222;
+    --color-bg: #000000;
     --color-txt: #ffffff;
-    --color-azul-1: #09143c;
-    --color-azul-2: #0068b4;
-    --color-painel: #1c1c1c;
+    --color-azul-1: #0136af;
+    --color-azul-2: #007bff;
+    --color-painel: #121212;
     --color-txt-2: #bbbbbb;
+    --color-input: #1c1c1c;
 }
 
 .light-mode {
@@ -19,6 +20,7 @@
     --color-azul-2: #22abfa;
     --color-painel: #f0f0f0;
     --color-txt-2: #444444;
+    --color-input: #f0f0f0;
 }
 
 * {
@@ -60,13 +62,20 @@ header {
 .painel {
     width: 500px;
     background-color: var(--color-painel);
-    border-radius: 10px;
-    margin: 10px;
+    border-radius: 20px;
+    margin: 3% 15px;
     padding: 15px;
 }
 
-.painel-header {
-    color: #fff;
+.painel-header span {
+    color: var(--color-txt);
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center!important;
+    display: block;
+    margin-bottom: -10px;
 }
 
 .painel-body {
@@ -107,7 +116,7 @@ header {
 
 .search-input:focus,
 .search-input::placeholder {
-    color: #e6e6e6;
+    color: #fff;
 }
 
 .search-input {
@@ -192,6 +201,28 @@ header {
     font-style: italic;
 }
 
+#div-campos input {
+    width: calc(100% - 0px);
+    padding: 5px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background: var(--color-input);
+    color: var(--color-txt);
+}
+
+#div-campos label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#calcularMediaButton {
+    margin: 10px auto auto auto;
+    display: block;
+    border-radius: 10px;
+    width: 80%;
+}
+
 
 /* NAV BAR */
 
@@ -241,7 +272,6 @@ input {
     padding: 5px;
     border-radius: 10px;
     border: 1px solid var(--color-bg);
-    ;
 }
 
 .txt-body {
@@ -265,7 +295,7 @@ col footer {
 }
 
 .leftinfo .bigtext {
-    font-size: 30px;
+    font-size: 28px;
     line-height: 40px;
     color: var(--color-txt);
 }
@@ -288,7 +318,7 @@ col footer {
 
 @media(max-width: 800px) {
     header {
-        padding: 20px;
+        padding: 5px 15px;
         margin-bottom: 20px;
     }
     .txt-header {

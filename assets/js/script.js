@@ -18,7 +18,7 @@ fetch('assets/json/disciplinas.json')
             // Insere a quantidade de campos necessários para notas
             var campos = document.getElementById("div-campos")
             for (var i = 1; i <= disciplina.qtdCampos; i++) {
-                campos.innerHTML += `<p class="txt-body" id="nota${i}_p">Nota ${disciplina.nomeCampos[i-1]}: <input type="number" id="nota${i}"></p>`;
+                campos.innerHTML += `<label class="txt-body" id="nota${i}_label" for="nota${i}">Nota ${disciplina.nomeCampos[i-1]}:</label> <div id="nota${i}_div"><input type="number" id="nota${i}"></div>`;
             }
 
             // Se houver, recupera as notas do armazenamento local
@@ -34,8 +34,10 @@ fetch('assets/json/disciplinas.json')
 
             if (notasExistem) {
                 for (var i = 1; i <= disciplina.qtdCampos; i++) {
-                    var notaElemento = document.getElementById(`nota${i}_p`);
-                    notaElemento.innerHTML = `Nota ${disciplina.nomeCampos[i-1]}: <input type="number" value="${notas[i-1]}" id="nota${i}"> &#x1F4BE`;
+                    var notaElemento = document.getElementById(`nota${i}_label`);
+                    var notaInput = document.getElementById(`nota${i}_div`);
+                    notaElemento.innerHTML = `Nota ${disciplina.nomeCampos[i-1]}:`;
+                    notaInput.innerHTML = `<input type="number" value="${notas[i-1]}" id="nota${i}" style=" width: calc(100% - 30px);"> &#x1F4BE`;
                 }
             }
 

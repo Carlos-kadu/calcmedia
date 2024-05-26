@@ -71,18 +71,21 @@ document.addEventListener('DOMContentLoaded', function() {
             name: 'Probabilidade e Estatística aplicado à Engenharia - Marília',
             url: 'peae-marilia',
             tags: ['pe', 'peae', 'marilia', 'probabilidade']
-        }
-        ,
+        },
         {
             name: 'Estrutura de dados e algoritmos 2 - John',
             url: 'eda2-john',
             tags: ['eda2', 'john', 'estrutura de dados', 'algoritmos']
-        }
-        ,
+        },
         {
             name: 'Compiladores - Bruno Ribas',
             url: 'comp-ribas',
             tags: ['ribas', 'compiladores', 'comp', 'bruno']
+        },
+        {
+            name: 'Sistemas de Banco de Dados 1 - Vandor Roberto',
+            url: 'sbd1-vandor',
+            tags: ['vandor', 'sbd1', 'bancos', 'dados']
         }
     ];
     /* INSERIR NOVA DISCIPLINA ACIMA */
