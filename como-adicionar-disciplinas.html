@@ -82,7 +82,7 @@
         </p>
         <h3 class="passos">2: Clone do Repositório</h3>
         <p>Clone o repositório forked para sua máquina local usando o seguinte comando no terminal:</p>
-        <pre><code class="language-git txt-body">git clone https://github.com/seu-username/nome-do-repositorio.git</code></pre>
+        <pre><code class="language-git txt-body">git clone https://github.com/Carlos-kadu/calcmedia.git</code></pre>
 
         <h3 class="passos">3: Edição do Arquivo disciplinas.json</h3>
         <p>Abra o arquivo assets/json/disciplinas.json e adicione uma nova entrada seguindo o padrão fornecido. Por exemplo:</p>
@@ -107,8 +107,51 @@
             por vírgula. Ex: "pesos": [0.7, 0.7, 0.7, 0.9]). Em seguida será feita a soma dos valores e posteriormente a divisão (O divisor é informado no campo "dividePor". Ex: "dividePor": 3).</p>
         <p>
             Uma média dada pela fórmula:
-            <img style="height: 50px; border-radius:10px; filter: invert(1)" src="assets/imgs/ex-formula1.png">, deve ser manipulada (colocar um denominador comum. MMC) para que chegue em algo como:<img style="height: 50px; border-radius:10px; filter:invert(1)"
-                src="assets/imgs/ex-formula2.png">.
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                    <mrow>
+                      <mi>media</mi>
+                      <mo>=</mo>
+                      <mo>(</mo>
+                      <mfrac>
+                        <mrow>
+                          <mi>P</mi>
+                          <mn>1</mn>
+                          <mo>+</mo>
+                          <mi>P</mi>
+                          <mn>2</mn>
+                          <mo>+</mo>
+                          <mi>P</mi>
+                          <mn>3</mn>
+                        </mrow>
+                        <mn>3</mn>
+                      </mfrac>
+                      <mo>)</mo>
+                      <mo>&#x22C5;</mo>
+                      <mn>0.7</mn>
+                      <mo>+</mo>
+                      <mi>NE</mi>
+                      <mo>&#x22C5;</mo>
+                      <mn>0.3</mn>
+                    </mrow>
+                  </math>, deve ser manipulada (colocar um denominador comum. MMC) para que chegue em algo como:
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <mrow>
+                  <mi>media</mi>
+                  <mo>=</mo>
+                  <mfrac>
+                    <mrow>
+                      <mi>P</mi><mn>1</mn><mo>&#x22C5;</mo><mn>0.7</mn>
+                      <mo>+</mo>
+                      <mi>P</mi><mn>2</mn><mo>&#x22C5;</mo><mn>0.7</mn>
+                      <mo>+</mo>
+                      <mi>P</mi><mn>3</mn><mo>&#x22C5;</mo><mn>0.7</mn>
+                      <mo>+</mo>
+                      <mi>NE</mi><mo>&#x22C5;</mo><mn>0.9</mn>
+                    </mrow>
+                    <mn>3</mn>
+                  </mfrac>
+                </mrow>
+              </math>.
         </p>
         <p>
             Certifique-se de ajustar o id e a url para garantir unicidade e conformidade com o padrão.

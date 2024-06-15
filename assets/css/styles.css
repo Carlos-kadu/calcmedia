@@ -451,6 +451,10 @@ col footer {
     color: var(--color-txt);
 }
 
+.disciplinas:hover {
+    border: 2px solid var(--color-txt);
+}
+
 .img-disciplinas {
     width: 50px;
     border-radius: 10px;
