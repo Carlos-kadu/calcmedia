@@ -197,11 +197,10 @@
         "nome": "Engenharia de Segurança do Trabalho - Maria Alzira",
         "qtdCampos": 12,
         "nomeCampos": ["AS1", "AS2", "AS3", "AS4", "AS5", "AS6", "AS7", "AS8", "AS9", "AS10", "AS11", "TrabalhoFinal"],
-        "pesos": [0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.3],
+        "pesos": [0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 3.3],
         "mediaAprovacao": 5,
         "dividePor": 11,
-        "ultimaAtualizacao": "2024.1",
-        "formula": "0.7 * (AS1 + AS2 + AS3 + AS4 + AS5 + AS6 + AS7 + AS8 + AS9 + AS10 + AS11) + 0.3 * TrabalhoFinal"
+        "ultimaAtualizacao": "2024.1"
     }
     
     
