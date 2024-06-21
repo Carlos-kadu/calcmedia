@@ -88,23 +88,31 @@
         <p>Abra o arquivo assets/json/disciplinas.json e adicione uma nova entrada seguindo o padrão fornecido. Por exemplo:</p>
         <pre><code class="language-json">
         {
-        "c2-yoko": {
-            "id": 2,
-            "url": "c2-yoko",
-            "nome": "C2 - Yoko",
-            "qtdCampos": 4,
-            "nomeCampos": ["P1", "P2", "P3", "NE"],
-            "pesos": [0.7, 0.7, 0.7, 0.9],
-            "mediaAprovacao": 5,
-            "dividePor": 3,
-            "ultimaAtualizacao": "2023.1"
-        },
+            "c2-yoko": {
+                "id": 2,
+                "url": "c2-yoko",
+                "nome": "C2 - Yoko",
+                "qtdCampos": 4,
+                "nomeCampos": ["P1", "P2", "P3", "NE"],
+                "pesos": [0.7, 0.7, 0.7, 0.9],
+                "mediaAprovacao": 5,
+                "dividePor": 3,
+                "ultimaAtualizacao": "2023.1",
+                "tags": ["cálculo 2", "yoko", "c2"]
+            },
         }
         </code></pre>
 
         <p>
-            ⚠️ Se necessário, devido as limitações do projeto, ajuste a fórmula de cálculo da média para a nova disciplina. Note que o script irá fazer as multiplicações dos valores inseridos pelo usuário pelos respectivos pesos (disponíveis no campo "pesos" separados
-            por vírgula. Ex: "pesos": [0.7, 0.7, 0.7, 0.9]). Em seguida será feita a soma dos valores e posteriormente a divisão (O divisor é informado no campo "dividePor". Ex: "dividePor": 3).</p>
+            ⚠️ É importante que todas as informações estejam completas. O campo "tags" é utilizado para facilitar as buscas, portanto, inclua nele as palavras-chave que considerar mais adequadas.
+        </p>
+        <p>
+            Certifique-se de ajustar o id e a url para garantir unicidade e conformidade com o padrão.
+        </p>
+        <p>
+            Devido as limitações do projeto, se necessário, ajuste a fórmula de cálculo da média para a nova disciplina. Note que o script irá fazer as multiplicações dos valores inseridos pelo usuário pelos respectivos pesos (campo "pesos" Ex: "pesos": [0.7, 0.7,
+            0.7, 0.9]), em seguida será feita a soma e posteriormente a divisão (campo "dividePor". Ex: "dividePor": 3).
+        </p>
         <p>
             Uma média dada pela fórmula:
             <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -133,7 +141,7 @@
                       <mo>&#x22C5;</mo>
                       <mn>0.3</mn>
                     </mrow>
-                  </math>, deve ser manipulada (colocar um denominador comum. MMC) para que chegue em algo como:
+                  </math>, deve ser manipulada, isto é colocar um denominador comum. (MMC) para que chegue em algo como:
             <math xmlns="http://www.w3.org/1998/Math/MathML">
                 <mrow>
                   <mi>media</mi>
@@ -151,33 +159,19 @@
                     <mn>3</mn>
                   </mfrac>
                 </mrow>
-              </math>.
-        </p>
-        <p>
-            Certifique-se de ajustar o id e a url para garantir unicidade e conformidade com o padrão.
+              </math>, que satisfas as necessidades do script.
         </p>
 
-        <h3 class="passos">5: Atualização do Arquivo search.js</h3>
-        <p>Abra o arquivo assets/js/search.js e adicione uma nova entrada para a disciplina. Por exemplo:</p>
-
-        <pre><code class="language-js">
-            {
-                name: 'Cálculo 2 - Yoko',
-                url: 'c2-yoko',
-                tags: ['cálculo', 'yoko', 'c2']
-            },
-        </code></pre>
-
-        <h3 class="passos">6: Realizar Testes</h3>
+        <h3 class="passos">4: Realizar Testes</h3>
         <p>
             Não esqueça de realizar testes para checar o bom funcionamento das suas alterações.
         </p>
 
-        <h3 class="passos">7: Commit e Push das Alterações</h3>
+        <h3 class="passos">5: Commit e Push das Alterações</h3>
         <p>
             Depois de realizar as alterações, adicione, realize o commit e faça o push para o seu repositório no Git.
         </p>
-        <h3 class="passos">8: Pull Request</h3>
+        <h3 class="passos">6: Pull Request</h3>
         <p>
             Finalmente, vá para o Git e crie um Pull Request para contribuir com as suas alterações de volta para o repositório original. Suas alterações serão revisadas e, se tudo estiver correto, a nova disciplina será incorporada ao projeto.
         </p>
