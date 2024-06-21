@@ -20,7 +20,7 @@
     --color-azul-2: #22abfa;
     --color-painel: #f0f0f0;
     --color-txt-2: #444444;
-    --color-input: #f0f0f0;
+    --color-input: #fefefe;
 }
 
 * {
@@ -88,17 +88,20 @@ header {
 
 .resultados-pesquisa {
     cursor: pointer;
-    color: var(--color-txt);
+    color: var(--color-txt)!important;
     text-decoration: none;
-    padding: 2px 10px;
+    padding: 10px 10px;
     display: block;
-    margin: 0px;
+    margin: 5px;
+    background: var(--color-input);
+    border-radius: 20px;
 }
 
 .resultados-pesquisa:hover {
-    text-decoration: underline;
     transition: .4s;
-    margin-left: 3px;
+    background: var(--color-painel);
+    border: 1px solid var(--color-txt);
+    text-decoration: none;
 }
 
 .search-input {

@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.querySelector('#search-input');
     const searchButton = document.querySelector('#search-button');
     const resultadosBusca = document.querySelector('#search-results');
-    const modalBody = document.querySelector('.modal-body');
+    const modalBody = document.querySelector('.painel-search');
 
     fetch('assets/json/disciplinas.json')
         .then(response => response.json())
@@ -19,14 +19,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (termoBusca.length >= 2) {
                     Object.keys(data).forEach(function(key) {
                         let item = data[key];
-                        if (item.nome.toLowerCase().includes(termoBusca.toLowerCase()) ||
-                            item.tags.some(tag => tag.toLowerCase().includes(termoBusca.toLowerCase()))) {
-                            const result = document.createElement('p');
-                            result.innerHTML = '<i class="fa-solid fa-angles-right"></i> ' + item.nome;
+                        // if (item.nome.toLowerCase().includes(termoBusca.toLowerCase()) ||
+                        //     item.tags.some(tag => tag.toLowerCase().includes(termoBusca.toLowerCase()))) {
+                        if (item.tags.some(tag => tag.toLowerCase().includes(termoBusca.toLowerCase()))) {
+                            const result = document.createElement('a');
+                            result.innerHTML = '🔗 ' + item.nome;
                             result.classList.add('resultados-pesquisa');
-                            result.addEventListener('click', function() {
-                                enviaDisciplina(item.url);
-                            });
+                            result.href = 'media.html?em=' + item.url;
                             resultadosBusca.appendChild(result);
                             haResultados = true;
                         }

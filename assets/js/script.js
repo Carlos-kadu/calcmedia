@@ -9,7 +9,6 @@ fetch('assets/json/disciplinas.json')
         var disciplina = data[valorRecebido];
 
         if (disciplina) {
-            // Restante do seu código para atualizar a página com as informações da disciplina
             document.getElementById("disciplina-title").innerText = disciplina.nome + " :: Calculadora de Médias";
             document.getElementById("disciplina-name").innerText = disciplina.nome;
             document.getElementById("atualizacao").innerText += " " + disciplina.ultimaAtualizacao;
