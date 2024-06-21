@@ -3,7 +3,7 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+git+json+jso
     
     code[class*=language-],
     pre[class*=language-] {
-        color: #000;
+        color: var(--color-txt);
         background: 0 0;
         /*text-shadow: 0 1px #fff;*/
         font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
@@ -54,7 +54,7 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+git+json+jso
     
      :not(pre)>code[class*=language-],
     pre[class*=language-] {
-        background: #f0f0f0
+        background: var(--color-painel)
     }
     
      :not(pre)>code[class*=language-] {
