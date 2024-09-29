@@ -1,7 +1,7 @@
-function addFalta(id) {
+function addFalta(id, falta) {
     var qtd_faltas = localStorage.getItem(`qtd_faltas_id_${id}`);
     qtd_faltas = parseInt(qtd_faltas);
-    qtd_faltas++;
+    qtd_faltas = qtd_faltas + falta;
     localStorage.setItem(`qtd_faltas_id_${id}`, qtd_faltas);
 
     var disciplinas = document.getElementById("disciplinas_faltometro");
@@ -10,17 +10,20 @@ function addFalta(id) {
 
 }
 
-function removeFalta(id) {
+function removeFalta(id, falta) {
     var qtd_faltas = localStorage.getItem(`qtd_faltas_id_${id}`);
-    if (qtd_faltas > 0) {
-        qtd_faltas = parseInt(qtd_faltas);
-        qtd_faltas--;
-        localStorage.setItem(`qtd_faltas_id_${id}`, qtd_faltas);
+    qtd_faltas = parseInt(qtd_faltas);
 
-        var disciplinas = document.getElementById("disciplinas_faltometro");
-        disciplinas.innerHTML = "";
-        mostrarDisciplinas();
+    if (falta == 2 && qtd_faltas > 1) {
+        qtd_faltas = qtd_faltas - falta;
+    } else if (qtd_faltas > 0 && falta != 2) {
+        qtd_faltas = qtd_faltas - falta;
     }
+
+    localStorage.setItem(`qtd_faltas_id_${id}`, qtd_faltas);
+    var disciplinas = document.getElementById("disciplinas_faltometro");
+    disciplinas.innerHTML = "";
+    mostrarDisciplinas();
 }
 
 function mostrarDisciplinas() {
@@ -33,27 +36,30 @@ function mostrarDisciplinas() {
             var qtd_creditos = localStorage.getItem(`qtd_creditos_id_${i}`);
             var qtd_faltas = localStorage.getItem(`qtd_faltas_id_${i}`);
 
-            limite_faltas = qtd_creditos * 2 - 1
+            limite_faltas = (qtd_creditos * 2 - 1) * 2
 
 
             document.getElementById('disciplinas_faltometro').innerHTML += `<div class="col-sm coluna-disciplinas">
-                <div class="disciplinas">
+                <div class="disciplinas" id="disciplina_${i}">
                     <div class="media">
                         <div class="media-body">
                             <h5 class="mt-0 mb-1">${disciplina}</h5>
-                            <p class="descricao-disciplinas">Qtd. créditos: ${qtd_creditos}</p>
-                            <div style="text-align:left">
-                                <button style="margin: 5px 0px; color:#fff;" class="btn-3" onclick="addFalta(${i})"><i class="fa fa-plus"></i> falta</button>
-                                <button style="margin: 5px; color:#fff;" class="btn-3" onclick="removeFalta(${i})"><i class="fa fa-minus"></i> falta</button>
-                            </div>
+                            <p class="descricao-disciplinas">${qtd_creditos} Créditos - ${qtd_creditos*15}h.</p>
                             <hr style="background: var(--color-txt);opacity: 0.25;">
-                            <p style="text-align: left">ℹ️ Suas faltas: ${qtd_faltas}</br>
-                                ⚠️ Limite recomendado: ${limite_faltas}</p>
-                            
+                            <div style="text-align:left">
+                                <p style="margin-bottom: 0px;">Adicionar ou remover faltas:</p>
+                                <button style="margin: 5px 0px; color:#fff;" class="btn-3" onclick="addFalta(${i}, 1)"><i class="fa fa-plus"></i> 1</button>
+                                <button style="margin: 5px; color:#fff;" class="btn-3" onclick="removeFalta(${i}, 1)"><i class="fa fa-minus"></i> 1</button>
+                                <button style="margin: 5px 0px; color:#fff;" class="btn-3" onclick="addFalta(${i}, 2)"><i class="fa fa-plus"></i> 2</button>
+                                <button style="margin: 5px; color:#fff;" class="btn-3" onclick="removeFalta(${i}, 2)"><i class="fa fa-minus"></i> 2</button>
+                            </div>
+                            <br>
+                            <p style="text-align: left; margin: 0px">📊 Suas faltas: ${qtd_faltas}</p>
+                            <p style="text-align: left; margin: 0px 0px 10px 0px">🚨 Limite ideal: ${limite_faltas}</p>
                         </div>
                         <div><button style="background: transparent" class="btn-3"  href="" onclick="excluirDisciplina(${i})"><i class="fa fa-close"></i></button></div>
                     </div>
-                    <div class="progress-bar-container">
+                    <div class="progress-bar-container" style="background-color: var(--color-input);">
                         <div class="progress-bar" id="progress_bar_${i}"></div>
                     </div>
                 </div>
@@ -63,7 +69,9 @@ function mostrarDisciplinas() {
             var progresso = progresso.toFixed(2);
             if (progresso > 100) {
                 document.getElementById(`progress_bar_${i}`).style.width = 100 + "%";
-                document.getElementById(`progress_bar_${i}`).style.background = "#FF0000";
+                document.getElementById(`progress_bar_${i}`).style.setProperty('background', 'linear-gradient(144deg, #ff0000, #ff4b4b)');
+                document.getElementById(`disciplina_${i}`).style.setProperty('border', '2px solid #ff0000');
+
             } else {
                 document.getElementById(`progress_bar_${i}`).style.width = progresso + "%";
             }

@@ -9,8 +9,8 @@ fetch('assets/json/disciplinas.json')
         var disciplina = data[valorRecebido];
 
         if (disciplina) {
-            document.getElementById("disciplina-title").innerText = disciplina.nome + " :: Calculadora de Médias";
-            document.getElementById("disciplina-name").innerText = disciplina.nome;
+            document.getElementById("disciplina-title").innerText = disciplina.nome + ' Prof.: ' + disciplina.prof + " :: Calculadora de Médias";
+            document.getElementById("disciplina-name").innerText = disciplina.nome + ' - ' + disciplina.prof;
             document.getElementById("atualizacao").innerText += " " + disciplina.ultimaAtualizacao;
             document.getElementById("mediaAprovacao").innerText += " " + disciplina.mediaAprovacao;
 

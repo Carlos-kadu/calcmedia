@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         //     item.tags.some(tag => tag.toLowerCase().includes(termoBusca.toLowerCase()))) {
                         if (item.tags.some(tag => tag.toLowerCase().includes(termoBusca.toLowerCase()))) {
                             const result = document.createElement('a');
-                            result.innerHTML = '🔗 ' + item.nome;
+                            result.innerHTML = item.nome + ' - ' + item.prof + ' <i style="background: linear-gradient(144deg, #af40ff, #4f46e5); -webkit-background-clip: text; color: transparent;" class="fa-solid fa-arrow-right"></i> ';
                             result.classList.add('resultados-pesquisa');
                             result.href = 'media.html?em=' + item.url;
                             resultadosBusca.appendChild(result);

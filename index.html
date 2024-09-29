@@ -19,27 +19,7 @@
     <meta charset="UTF-8" />
     <link rel="shortcut icon" sizes="512x512" href="assets/imgs/icon-512x512.png">
     <title>CalcMédia :: Calculadora de Médias</title>
-
-    <style>
-         :root {
-            --color-azul-1: #0136af;
-        }
-        
-        .light-mode {
-            --color-azul-1: #007bff;
-        }
-        
-        #loader {
-            position: fixed;
-            z-index: 99999;
-            background: var(--color-azul-1);
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/loader.css">
 </head>
 
 <body>
@@ -55,12 +35,13 @@
         <p class="txt-header">Simule sua média</p>
     </header>
     <div class="txt-body" style="padding: 0px;margin: 40px 5%;">
-        <p>Para simular sua média, basta selecionar uma das disciplinas disponíveis <a href="disciplinas.html">aqui</a> ou procurar através da caixa de pesquisa. </p>
+        <p>Para simular sua média, selecione uma das
+            <a href="disciplinas.html">disciplinas disponíveis</a> ou procure através da caixa de pesquisa. </p>
     </div>
-    <div class="painel-container" style="margin-top:5%">
-        <div class="painel" style="display: flex;justify-content: center;align-items: center; height: 200px;">
+    <div class="painel-container">
+        <div class="" style="display: flex;justify-content: center;align-items: center; height: 200px;">
             <div class="leftinfo">
-                <div id="bigtext" class="bigtext">Fim do semestre em :
+                <div style="background: linear-gradient(144deg, #af40ff, #4f46e5); -webkit-background-clip: text; color: transparent;" id="bigtext" class="bigtext">Fim do semestre em:
                     <div id="counter"></div>
                     <div class="progress-bar-container">
                         <div class="progress-bar" id="progress-bar"></div>
@@ -70,19 +51,74 @@
                 </div>
             </div>
         </div>
-        <div class="painel" style="text-align: left;">
+        <!-- <div class="painel" style="text-align: left;">
             <div class="painel-header txt-body" style="font-weight: bold;">📅 Calendário Acadêmico 2024:</div>
             <div class="painel-body">
                 <p class="txt-body" style="font-weight: normal;">
                     Verão 2024: de 08/01/2024 até 10/02/2024 (30 dias)<br>2024.1: de 18/03/2024 até 15/07/2024 (100 dias)<br>2024.2: de 19/08/2024 até 17/12/2024 (100 dias)<br> Verão 2025: de 06/01/2025 até 08/02/2025 (30 dias)
                 </p>
             </div>
+        </div> -->
+    </div>
+
+    <div style="background: var(--color-painel); text-align: center;">
+        <div class="container coluna-disciplinas" style="padding: 20px;">
+            <h2 style="color: var(--color-txt);text-align: center;font-weight: bold;padding: 15px;">Últimas disciplina adicionadas</h2>
+            <div class="row" id="disciplinas-container">
+            </div>
+            <a href="disciplinas.html">
+                <button class="btn-4" style="margin: 20px;">Ver todas as disciplinas</button>
+            </a>
         </div>
-    </div><br><br>
+    </div>
     <div id="footer"></div>
+    <script>
+        // Função para gerar a string HTML da disciplina
+        function gerarHTMLDisciplina(disciplina) {
+            return `
+        <div class="col-sm coluna-disciplinas">
+            <div class="disciplinas">
+                <a href="media.html?em=${disciplina.url}" style="text-decoration: none; color: var(--color-txt);">
+                    <div class="media">
+                        <img class="align-self-center mr-3 img-disciplinas" src="assets/imgs/icone-disciplinas.png" alt="icone disciplinas">
+                        <div class="media-body">
+                            <p class="mt-0 mb-1" style="margin-bottom: 0px !important;">${disciplina.nome}</p>
+                            <p class="mt-0 mb-1" style="margin-top: -5px !important; font-size: 16px">Prof: ${disciplina.prof}</p>
+                            <p class="descricao-disciplinas">Atualizado em: ${disciplina.ultimaAtualizacao}</p>
+                        </div><i style="background: linear-gradient(144deg, #af40ff, #4f46e5); -webkit-background-clip: text; color: transparent;" class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    `;
+        }
+
+        var disciplinasContainer = document.getElementById("disciplinas-container");
+        var limite = 0;
+        fetch('assets/json/disciplinas.json')
+            .then(response => response.json())
+            .then(disciplinas => {
+
+                var disciplinasArray = Object.values(disciplinas).reverse();
+
+                // Iterar sobre as disciplinas no JSON
+                for (var i in disciplinasArray) {
+                    limite += 1;
+                    if (disciplinasArray.hasOwnProperty(i)) {
+                        var disciplina = disciplinasArray[i];
+                        // Chamar a função para gerar a string HTML da disciplina
+                        var htmlDisciplina = gerarHTMLDisciplina(disciplina);
+                        disciplinasContainer.innerHTML += htmlDisciplina;
+                    }
+                    console.log()
+                    if (limite > 5) break;
+                }
+            })
+            .catch(error => console.error('Erro ao carregar disciplinas.json:', error));
+    </script>
     <script src="assets/js/countdown.js?v=270823"></script>
     <script src="assets/js/pwabuilder-sw.js"></script>
-    <script src="assets/js/menu-footer-mode.js?v=2.240620"></script>
+    <script src="assets/js/menu-footer-mode.js?v=2.290924"></script>
     <script src="assets/js/pwa-button.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" crossorigin="anonymous"></script>

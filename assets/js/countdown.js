@@ -1,5 +1,5 @@
-var startDate = new Date("Mar 18, 2024 08:03:00").getTime();
-var endDate = new Date("Jul 15, 2024 22:30:00").getTime();
+var startDate = new Date("Oct 14, 2024 08:00:00").getTime();
+var endDate = new Date("Feb 22, 2025 22:30:00").getTime();
 var totalTime = endDate - startDate;
 
 var x = setInterval(function() {

@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 return `
                 <tr>
                     <td>${disciplina.id}</td>
-                    <td>${disciplina.nome}</td>
+                    <td>${disciplina.nome} - ${disciplina.prof}</td>
                     <td>${disciplina.ultimaAtualizacao}</td>
                     <td>
                         <a href="media.html?em=${disciplina.url}">

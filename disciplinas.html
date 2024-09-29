@@ -19,26 +19,7 @@
     <meta charset="UTF-8" />
     <link rel="shortcut icon" sizes="512x512" href="assets/imgs/icon-512x512.png">
     <title>CalcMédia :: Disciplinas Disponíveis</title>
-    <style>
-         :root {
-            --color-azul-1: #0136af;
-        }
-        
-        .light-mode {
-            --color-azul-1: #007bff;
-        }
-        
-        #loader {
-            position: fixed;
-            z-index: 99999;
-            background: var(--color-azul-1);
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/loader.css">
 </head>
 
 <body>
@@ -66,7 +47,7 @@
         </div>
     </div>
 
-
+    <br><br>
     <div id="footer"></div>
 
     <script>
@@ -75,16 +56,16 @@
             return `
         <div class="col-sm coluna-disciplinas">
             <div class="disciplinas">
-                <div class="media">
-                    <img class="align-self-center mr-3 img-disciplinas" src="assets/imgs/icone-disciplinas.png" alt="icone disciplinas">
-                    <div class="media-body">
-                        <h5 class="mt-0 mb-1">${disciplina.nome}</h5>
-                        <p class="descricao-disciplinas">Última atualização em: ${disciplina.ultimaAtualizacao}</p>
-                        <a href="media.html?em=${disciplina.url}">
-                            <p class="links-disciplinas"><i class="fa-solid fa-calculator"></i> Simular média</p>
-                        </a>
+                <a href="media.html?em=${disciplina.url}" style="text-decoration: none; color: var(--color-txt);">
+                    <div class="media">
+                        <img class="align-self-center mr-3 img-disciplinas" src="assets/imgs/icone-disciplinas.png" alt="icone disciplinas">
+                        <div class="media-body">
+                            <p class="mt-0 mb-1" style="margin-bottom: 0px !important;">${disciplina.nome}</p>
+                            <p class="mt-0 mb-1" style="margin-top: -5px !important; font-size: 16px">Prof: ${disciplina.prof}</p>
+                            <p class="descricao-disciplinas">Atualizado em: ${disciplina.ultimaAtualizacao}</p>
+                        </div><i style="background: linear-gradient(144deg, #af40ff, #4f46e5); -webkit-background-clip: text; color: transparent;" class="fa-solid fa-arrow-right"></i>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     `;
@@ -108,7 +89,7 @@
             .catch(error => console.error('Erro ao carregar disciplinas.json:', error));
     </script>
 
-    <script src="assets/js/menu-footer-mode.js?v=2.240620"></script>
+    <script src="assets/js/menu-footer-mode.js?v=2.290924"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>

@@ -6,8 +6,8 @@
 :root {
     --color-bg: #000000;
     --color-txt: #ffffff;
-    --color-azul-1: #0136af;
-    --color-azul-2: #007bff;
+    --color-1: #4f46e5;
+    --color-2: #8c42f5;
     --color-painel: #121212;
     --color-txt-2: #bbbbbb;
     --color-input: #1c1c1c;
@@ -16,8 +16,8 @@
 .light-mode {
     --color-bg: #fcfcfc;
     --color-txt: #222222;
-    --color-azul-1: #007bff;
-    --color-azul-2: #22abfa;
+    --color-1: #4f46e5;
+    --color-2: #8c42f5;
     --color-painel: #f0f0f0;
     --color-txt-2: #444444;
     --color-input: #fefefe;
@@ -29,6 +29,23 @@
     box-sizing: border-box;
 }
 
+html {
+    min-height: 100vh;
+    background: var(--color-1);
+}
+
+a {
+    color: #6540dd;
+    background: linear-gradient(144deg, #af40ff, #4f46e5);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+a:hover {
+    color: #6540dd;
+    text-decoration: underline;
+}
+
 body {
     margin: 0;
     background: var(--color-bg);
@@ -36,11 +53,9 @@ body {
 }
 
 header {
-    margin-top: 55px;
-    text-align: center;
-    margin-bottom: -16px;
     color: #fff;
-    background: var(--color-azul-1)
+    background: var(--color-1);
+    width: 100%;
 }
 
 .txt-header {
@@ -48,8 +63,9 @@ header {
     text-align: left;
     margin-left: 8%;
     font-family: 'Poppins';
-    padding: 20px;
-    font-weight: 600
+    padding: 10px;
+    font-weight: 600;
+    margin-top: 50px;
 }
 
 .painel-container {
@@ -100,7 +116,7 @@ header {
 .resultados-pesquisa:hover {
     transition: .4s;
     background: var(--color-painel);
-    border: 1px solid var(--color-txt);
+    border: 1px solid var(--color-2);
     text-decoration: none;
 }
 
@@ -109,8 +125,8 @@ header {
     box-shadow: none;
     width: auto;
     color: #fff;
-    border: 1px solid var(--color-azul-2);
-    background-color: var(--color-azul-2)!important;
+    border: 1px solid var(--color-2);
+    background-color: var(--color-2)!important;
 }
 
 #search-button {
@@ -163,26 +179,26 @@ header {
 
 .btn-outline-success {
     color: #fff;
-    border-color: var(--color-azul-2);
-    background-color: var(--color-azul-2);
+    border-color: var(--color-2);
+    background-color: var(--color-2);
 }
 
 .btn-outline-success:hover {
     color: #fff;
-    border-color: var(--color-azul-2);
-    background-color: var(--color-azul-2);
+    border-color: var(--color-2);
+    background-color: var(--color-2);
 }
 
 .progress-bar-container {
     width: 100%;
     height: 16px;
-    background-color: var(--color-bg);
+    background-color: var(--color-painel);
     border-radius: 25px;
 }
 
 .progress-bar {
     height: 100%;
-    background: var(--color-azul-2);
+    background: linear-gradient(144deg, #af40ff, #4f46e5);
     border-radius: 24px;
     width: 0%;
     transition: width 0.5s;
@@ -194,7 +210,7 @@ header {
 }
 
 .big-text {
-    font-size: 36px;
+    font-size: 46px;
     margin-top: 20px;
 }
 
@@ -230,7 +246,7 @@ header {
 /* NAV BAR */
 
 .navbar-dark {
-    background: var(--color-azul-1);
+    background: var(--color-1);
     position: fixed;
     font-weight: 600
 }
@@ -246,7 +262,7 @@ header {
 
 .dropdown-menu {
     /* box-shadow: 0px 0px 3px 1px #111; */
-    background-color: var(--color-azul-2)!important;
+    background-color: var(--color-2)!important;
 }
 
 .dropdown-item {
@@ -257,7 +273,7 @@ header {
 .dropdown-item:hover {
     color: #16181b;
     text-decoration: none;
-    background-color: var(--color-azul-1)!important;
+    background-color: var(--color-1)!important;
     transition: .4s;
 }
 
@@ -298,7 +314,7 @@ col footer {
 }
 
 .leftinfo .bigtext {
-    font-size: 28px;
+    font-size: 30px;
     line-height: 40px;
     color: var(--color-txt);
 }
@@ -320,14 +336,11 @@ col footer {
 }
 
 @media(max-width: 800px) {
-    header {
-        padding: 5px 15px;
-        margin-bottom: 20px;
-    }
     .txt-header {
         font-size: 30px;
         margin-left: 0%;
-        padding: 0px;
+        padding: 5px 15px;
+        margin-top: 55px;
     }
     .painel {
         width: 400px;
@@ -342,21 +355,6 @@ col footer {
     .search-form {
         margin-top: 10px
     }
-}
-
-
-/*btn calcular*/
-
-.btn-primary {
-    color: #fff;
-    background-color: var(--color-azul-2)!important;
-    border-color: var(--color-azul-2)!important;
-}
-
-.btn-primary:hover {
-    color: #fff;
-    transition: .2s;
-    transform: scale(1.1);
 }
 
 
@@ -378,18 +376,32 @@ col footer {
     border-bottom: none!important;
 }
 
-.close {
-    color: #fff!important;
+.modal-header .close {
+    color: var(--color-txt)!important;
 }
 
 
 /* btn calcular */
 
 .btn-primary {
+    background: linear-gradient(144deg, #af40ff, #4f46e5)!important;
     color: #fff;
-    background-color: var(--color-azul-2);
-    border-color: var(--color-azul-2);
+    border-color: transparent;
     border-radius: 20px;
+}
+
+.btn-4 {
+    color: var(--color-txt);
+    border-radius: 20px;
+    border: 1px solid #4f46e5;
+    padding: 5px 10px;
+    background: transparent;
+}
+
+.btn-4:hover {
+    background: linear-gradient(144deg, #af40ff, #4f46e5)!important;
+    transition: .3s;
+    color: #fff;
 }
 
 .btn-secondary {
@@ -403,36 +415,15 @@ col footer {
 
 .btn-primary:hover {
     color: #fff;
-    background-color: #0079cf;
-    border-color: var(--color-azul-2);
     transform: scale(1.1);
     transition: .3s;
 }
-
-.btn-primary:hover {
-    color: #fff;
-    background-color: #0079cf;
-    border-color: var(--color-azul-2);
-    transform: scale(1.1);
-    transition: .3s;
-}
-
-.btn-primary:hover {
-    color: #fff;
-    background-color: #0079cf;
-    border-color: var(--color-azul-2);
-    transform: scale(1.1);
-    transition: .3s;
-}
-
-
-/**/
 
 .btn-3 {
     border: none;
-    background: var(--color-azul-2);
+    background: var(--color-2);
     border-radius: 33px;
-    padding: 1px 7px;
+    padding: 5px 10px;
     color: var(--color-txt);
 }
 
@@ -455,7 +446,7 @@ col footer {
 }
 
 .disciplinas:hover {
-    border: 2px solid var(--color-txt);
+    border: 2px solid var(--color-2);
 }
 
 .img-disciplinas {
@@ -467,7 +458,7 @@ col footer {
     text-align: left;
     color: var(--color-txt-2);
     font-style: italic;
-    font-size: 15px;
+    font-size: 14px;
     padding: 0px;
     margin: 0;
     margin-top: -5px;
@@ -484,14 +475,14 @@ col footer {
 
 .links-disciplinas {
     text-decoration: none;
-    /* color: var(--color-azul-2); */
+    /* color: var(--color-2); */
     text-align: left!important;
     font-weight: 600
 }
 
 .links-disciplinas:hover {
     transition: .4s;
-    color: var(--color-azul-2);
+    color: var(--color-2);
 }
 
 .imgs-sobre-icon {
