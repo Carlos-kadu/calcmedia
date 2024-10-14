@@ -10,6 +10,7 @@
         "mediaAprovacao": 50,
         "dividePor": 6,
         "ultimaAtualizacao": "2023.1",
+        "obs": "",
         "tags": ["eda1", "estrutura de dados e algoritmos 1", "algoritmos", "rose"]
     },
     "c2-yoko": {
@@ -23,6 +24,7 @@
         "mediaAprovacao": 5,
         "dividePor": 3,
         "ultimaAtualizacao": "2023.1",
+        "obs": "",
         "tags": ["cálculo 2", "yoko", "c2"]
     },
     "engecon-glauceny": {
@@ -36,6 +38,7 @@
         "mediaAprovacao": 5,
         "dividePor": 10,
         "ultimaAtualizacao": "2023.1",
+        "obs": "",
         "tags": ["engecon", "engenharia econômica", "glauceny", "econômica", "engenharia", "ee"]
     },
     "ial-yoko": {
@@ -49,6 +52,7 @@
         "mediaAprovacao": 5,
         "dividePor": 3,
         "ultimaAtualizacao": "2022.2",
+        "obs": "",
         "tags": ["ial", "yoko"]
     },
     "md1-glauco": {
@@ -62,6 +66,7 @@
         "mediaAprovacao": 5,
         "dividePor": 4,
         "ultimaAtualizacao": "2023.1",
+        "obs": "",
         "tags": ["md1", "matemática discreta 1", "glauco"]
     },
     "md1-edson": {
@@ -75,6 +80,7 @@
         "mediaAprovacao": 50,
         "dividePor": 5,
         "ultimaAtualizacao": "2023.1",
+        "obs": "",
         "tags": ["md1", "matemática discreta 1", "edson"]
     },
     "ted1-renato": {
@@ -88,6 +94,7 @@
         "mediaAprovacao": 5,
         "dividePor": 10,
         "ultimaAtualizacao": "2023.2",
+        "obs": "",
         "tags": ["ted1", "teoria de eletrônica digital 1", "digital", "renato", "eletrônica"]
     },
     "ped1-anderson": {
@@ -101,6 +108,7 @@
         "mediaAprovacao": 50,
         "dividePor": 20,
         "ultimaAtualizacao": "2023.1",
+        "obs": "",
         "tags": ["ped1", "prática de eletrônica digital 1", "digital", "anderson", "eletrônica"]
     },
     "c1-bernardini": {
@@ -114,6 +122,7 @@
         "mediaAprovacao": 5,
         "dividePor": 10,
         "ultimaAtualizacao": "2022.2",
+        "obs": "",
         "tags": ["cálculo 1", "bernardini", "c1"]
     },
     "md2-bernardini": {
@@ -127,6 +136,7 @@
         "mediaAprovacao": 5,
         "dividePor": 10,
         "ultimaAtualizacao": "2023.2",
+        "obs": "",
         "tags": ["matemática discreta 2", "bernardini", "md2"]
     },
     "fac-john": {
@@ -140,6 +150,7 @@
         "mediaAprovacao": 5,
         "dividePor": 3,
         "ultimaAtualizacao": "2023.2",
+        "obs": "",
         "tags": ["Fundamentos de Arquitetura de Computadores", "fac", "john", "arquitetura", "fundamentos", "computadores"]
     },
     "eda1-nilton": {
@@ -153,6 +164,7 @@
         "mediaAprovacao": 5,
         "dividePor": 6,
         "ultimaAtualizacao": "2023.2",
+        "obs": "",
         "tags": ["eda1", "estrutura de dados e algoritmos 1", "algoritmos", "nilton"]
     },
     "sbd1-vandor": {
@@ -166,6 +178,7 @@
         "mediaAprovacao": 5,
         "dividePor": 1,
         "ultimaAtualizacao": "2024.1",
+        "obs": "",
         "tags": ["Sistemas de Banco de Dados 1", "vandor", "sbd1", "bancos", "dados"]
     },
     "fso-daniel": {
@@ -179,6 +192,7 @@
         "mediaAprovacao": 5,
         "dividePor": 20,
         "ultimaAtualizacao": "2024.1",
+        "obs": "",
         "tags": ["Fundamentos de Sistemas Operacionais", "fso", "daniel", "sistemas", "fundamentos", "operacionas"]
     },
     "peae-marilia": {
@@ -192,6 +206,7 @@
         "mediaAprovacao": 5,
         "dividePor": 6,
         "ultimaAtualizacao": "2024.1",
+        "obs": "",
         "tags": ["Probabilidade e Estatística aplicado à Engenharia", "pe", "peae", "marilia", "probabilidade"]
 
     },
@@ -206,6 +221,7 @@
         "mediaAprovacao": 5,
         "dividePor": 3,
         "ultimaAtualizacao": "2024.1",
+        "obs": "",
         "tags": ["eda2", "john", "estrutura de dados e algoritmos 2", "algoritmos"]
     },
     "comp-ribas": {
@@ -219,6 +235,7 @@
         "mediaAprovacao": 5,
         "dividePor": 120,
         "ultimaAtualizacao": "2024.1",
+        "obs": "",
         "tags": ["ribas", "compiladores", "comp", "bruno"]
     },
     "eng-seg-trabalho-maria": {
@@ -232,6 +249,7 @@
         "mediaAprovacao": 5,
         "dividePor": 11,
         "ultimaAtualizacao": "2024.1",
+        "obs": "",
         "tags": ["Engenharia de Segurança do Trabalho", "engseg"]
     },
     "fac-tiago": {
@@ -245,6 +263,22 @@
         "mediaAprovacao": 5,
         "dividePor": 1,
         "ultimaAtualizacao": "2024.1",
+        "obs": "",
         "tags": ["Fundamentos de Arquitetura de Computadores", "fac", "tiago", "arquitetura", "fundamentos", "computadores"]
+    },
+    "adsw-milene": {
+        "id": 20,
+        "url": "adsw-milene",
+        "nome": "Arq. e Desenho de Software",
+        "prof": "Milene Serrano",
+        "qtdCampos": 4,
+        "nomeCampos": ["1", "2", "3", "4"],
+        "pesos": [0.3, 0.3, 0.3, 1],
+        "mediaAprovacao": 5,
+        "dividePor": 1,
+        "ultimaAtualizacao": "2024.2",
+        "obs": "A Nota 4 pode representar até 1 ponto.",
+        "tags": ["Arquitetura e Desenho de Software", "ads", "adsw", "milene", "Desenho", "Software"]
     }
+    
 }

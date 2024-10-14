@@ -11,8 +11,9 @@ fetch('assets/json/disciplinas.json')
         if (disciplina) {
             document.getElementById("disciplina-title").innerText = disciplina.nome + ' Prof.: ' + disciplina.prof + " :: Calculadora de Médias";
             document.getElementById("disciplina-name").innerText = disciplina.nome + ' - ' + disciplina.prof;
-            document.getElementById("atualizacao").innerText += " " + disciplina.ultimaAtualizacao;
-            document.getElementById("mediaAprovacao").innerText += " " + disciplina.mediaAprovacao;
+            document.getElementById("atualizacao").innerText += " " + disciplina.ultimaAtualizacao + ".";
+            document.getElementById("mediaAprovacao").innerText += " " + disciplina.mediaAprovacao + ".";
+            if(disciplina.obs){document.getElementById("obs").innerText += "Obs.: " + disciplina.obs;}
 
             // Insere a quantidade de campos necessários para notas
             var campos = document.getElementById("div-campos")
