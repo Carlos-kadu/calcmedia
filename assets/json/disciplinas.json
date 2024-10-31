@@ -279,6 +279,19 @@
         "ultimaAtualizacao": "2024.2",
         "obs": "A Nota 4 pode representar até 1 ponto.",
         "tags": ["Arquitetura e Desenho de Software", "ads", "adsw", "milene", "Desenho", "Software"]
+    },
+    "sbd2-vandor": {
+        "id": 21,
+        "url": "sbd2-vandor",
+        "nome": "SBD2",
+        "prof": "Vandor",
+        "qtdCampos": 9,
+        "nomeCampos": ["R1", "R2", "P1", "R3", "R4", "R5", "TF", "R6", "E"],
+        "pesos": [0.06, 0.08, 0.21, 0.07, 0.07, 0.08, 0.25, 0.08, 0.10],
+        "mediaAprovacao": 5,
+        "dividePor": 1,
+        "ultimaAtualizacao": "2024.2",
+        "obs": "",
+        "tags": ["Sistemas de Banco de Dados 2", "vandor", "sbd2", "bancos", "dados"]
     }
-    
 }
