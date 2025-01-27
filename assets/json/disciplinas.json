@@ -305,7 +305,7 @@
         "mediaAprovacao": 5,
         "dividePor": 3,
         "ultimaAtualizacao": "2024.2",
-        "obs": "Fórmula em atualização pelo professor. O valor máximo para cada nota atualmente é de: <br>Nota A1: 1. <br>Nota A2: 1. <br>Nota P1: 8. <br>Nota P2: 8. <br>Nota A3: 1. <br>Nota A4: 1. <br>Nota T1: 10. <br>Nota Extra: 1",
+        "obs": "O valor máximo para cada nota é de: <br>Nota A1: 1. <br>Nota A2: 1. <br>Nota P1: 8. <br>Nota P2: 8. <br>Nota A3: 2. <br>Nota A4: 2. <br>Nota T1: 8. <br>Nota Extra: 1",
         "tags": ["Fundamentos de Redes de Computadores", "FRC", "Redes", "Clenio"]
     }
 }
