@@ -34,6 +34,19 @@
         <p class="txt-header">Calcule sua média</p>
         </div>
     </header>
+
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="disciplinas.html">Disciplinas</a></li>
+            <li class="breadcrumb-item active" aria-current="page" id="breadcrumblink"></li>
+        </ol>
+    </nav>
+
+    <div style="padding: 0px;margin: 15px 8%;">
+        <p class="txt-body">Antes de simular sua média, leia atentamente as
+            <a href="#info">informações</a> e instruções fornecidas.</p>
+    </div>
     <div class="painel-container">
         <div class="painel" style="text-align: left;">
             <p class="painel-header"><span id="disciplina-name"></span></p>
@@ -41,22 +54,72 @@
             <!-- <div class="painel-header txt-body" style="font-weight: bold;">Insira as notas nos campos abaixo.</div> -->
             <div class="painel-body">
                 <div id="div-campos" class="modal-body"></div>
-                <p class="txt-body" id="resultado" style="font-weight: bold; margin-bottom: 0px; text-align: center;">
+                <p class="txt-body" id="situacao" style="font-weight: bold; margin-bottom: 0px; text-align: center;">
                 </p>
                 <div>
-                    <button type="button" id="calcularMediaButton" class="btn btn-primary">Calcular</button>
+                    <button style="width: 150px;" type="button" id="calcularMediaButton" class="btn btn-primary">Calcular</button>
                 </div>
-                <p class="txt-body" id="obs" style="margin-top: 20px;text-align: center;opacity: 0.8;font-weight: bold;font-style: italic;">
-                </p>
-                <p class="txt-body" id="atualizacao" style="margin-top:-20px;text-align: center; opacity: 0.8;font-weight: normal;font-style: italic;">
-                    Última atualização em:
-                </p>
-                <p class="txt-body" id="mediaAprovacao" style="text-align: center;margin-top: -20px;opacity: 0.8;font-weight: normal;font-style: italic;">
-                    Média mínima para aprovação:
-                </p>
             </div>
         </div>
     </div>
+
+    <div id="info" class="painel-container">
+        <div class="painel" style="text-align: left;">
+            <diV>
+                <p style="font-size: 20px; font-weight: bold;"><i class="fa fa-info-circle" aria-hidden="true" style="font-size: 20px;"></i> Informações</p>
+
+            </div>
+            <div>
+                <p>Preencha as notas nos campos indicados, verificando se todas as notas estão corretamente inseridas antes de finalizar.</p>
+                <p style="margin: 0px;" class="txt-body" id="atualizacao">
+                    Última atualização em:
+                </p>
+                <p style="margin: 0px;" class="txt-body" id="mediaAprovacao">
+                    Média mínima para aprovação:
+                </p>
+                <!-- <p style="margin: 0px;" class="txt-body" id="planoDeEnsino">
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i> Plano de ensino</a>. -->
+                </p>
+                <p style="margin: 0px;" class="txt-body" id="obs">
+                </p>
+                <hr>
+                <div style="text-align: center;">
+                    <button class="btn-4" id="btnCompartilharWhatsApp"><i class="fa-brands fa-whatsapp"></i> Compartilhar</button>
+                </div>
+                <hr>
+                <p style="margin: 10px 0px 0px 0px;" class="txt-body">
+                    Cálculo da média desatualizado?
+                    <a href="como-adicionar-disciplinas.html">Veja como atualizar</a>.
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("btnCompartilharWhatsApp").addEventListener("click", function() {
+            const link = encodeURIComponent(window.location.href)
+            const linkWhatsApp = `https://wa.me/?text=${link}`
+            window.open(linkWhatsApp, "_blank");
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    const offset = 60;
+                    const targetPosition = targetElement.offsetTop - offset;
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 
     <!-- Modal -->
     <div class="modal fade" id="modalAviso" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">

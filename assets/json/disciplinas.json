@@ -241,7 +241,7 @@
     "eng-seg-trabalho-maria": {
         "id": 18,
         "url": "eng-seg-trabalho-maria",
-        "nome": "Eng. de Segurança do Trabalho",
+        "nome": "Eng. Seg. Trab.",
         "prof": "Maria Alzira",
         "qtdCampos": 12,
         "nomeCampos": ["AS1", "AS2", "AS3", "AS4", "AS5", "AS6", "AS7", "AS8", "AS9", "AS10", "AS11", "TrabalhoFinal"],
@@ -269,8 +269,8 @@
     "adsw-milene": {
         "id": 20,
         "url": "adsw-milene",
-        "nome": "Arq. e Desenho de Software",
-        "prof": "Milene Serrano",
+        "nome": "ADSW",
+        "prof": "Milene",
         "qtdCampos": 4,
         "nomeCampos": ["1", "2", "3", "4"],
         "pesos": [0.3, 0.3, 0.3, 1],
@@ -291,7 +291,21 @@
         "mediaAprovacao": 5,
         "dividePor": 1,
         "ultimaAtualizacao": "2024.2",
-        "obs": "",
+        "obs": "Para ser aprovado, o aluno deve obter uma nota igual ou superior a 4,0 (quatro pontos) no Trabalho Final (TF), além de atender aos critérios tradicionais de frequência e média mínima exigida.",
         "tags": ["Sistemas de Banco de Dados 2", "vandor", "sbd2", "bancos", "dados"]
+    },
+    "redes-clenio": {
+        "id": 22,
+        "url": "redes-clenio",
+        "nome": "Redes",
+        "prof": "Clenio",
+        "qtdCampos": 8,
+        "nomeCampos": ["A1", "A2", "P1", "P2", "A3", "A4", "T1", "Extra"],
+        "pesos": [1, 1, 1, 1, 1, 1, 1, 3],
+        "mediaAprovacao": 5,
+        "dividePor": 3,
+        "ultimaAtualizacao": "2024.2",
+        "obs": "Fórmula em atualização pelo professor. O valor máximo para cada nota atualmente é de: <br>Nota A1: 1. <br>Nota A2: 1. <br>Nota P1: 8. <br>Nota P2: 8. <br>Nota A3: 1. <br>Nota A4: 1. <br>Nota T1: 10. <br>Nota Extra: 1",
+        "tags": ["Fundamentos de Redes de Computadores", "FRC", "Redes", "Clenio"]
     }
 }

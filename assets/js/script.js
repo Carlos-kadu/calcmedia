@@ -13,7 +13,11 @@ fetch('assets/json/disciplinas.json')
             document.getElementById("disciplina-name").innerText = disciplina.nome + ' - ' + disciplina.prof;
             document.getElementById("atualizacao").innerText += " " + disciplina.ultimaAtualizacao + ".";
             document.getElementById("mediaAprovacao").innerText += " " + disciplina.mediaAprovacao + ".";
-            if(disciplina.obs){document.getElementById("obs").innerText += "Obs.: " + disciplina.obs;}
+            document.getElementById("breadcrumblink").innerText = disciplina.nome + ' Prof.: ' + disciplina.prof
+            if (disciplina.obs) {
+                document.getElementById("obs").innerHTML += "<hr>" +
+                    "Obs.: " + disciplina.obs;
+            }
 
             // Insere a quantidade de campos necessários para notas
             var campos = document.getElementById("div-campos")
@@ -51,7 +55,7 @@ fetch('assets/json/disciplinas.json')
         }
         var media = localStorage.getItem(`${disciplina.id}_media`);
         if (media) {
-            document.getElementById('resultado').innerHTML = media;
+            document.getElementById("situacao").innerHTML = media
         }
     })
     .catch(error => console.error('Erro ao carregar disciplinas:', error));
@@ -85,5 +89,5 @@ function calcularMedia(disciplina) {
         media = `A sua média é: ${resultado}, você ainda não foi aprovado! &#x1F625`;
     }
     localStorage.setItem(`${disciplina.id}_media`, media);
-    document.getElementById('resultado').innerHTML = media + '<br><span class="save">Notas salvas no armazenamento local</span>';
+    document.getElementById('situacao').innerHTML = media + '<br><span class="save">Notas salvas no armazenamento local</span>';
 }

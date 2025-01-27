@@ -64,8 +64,15 @@
     <div id="menu"></div>
 
     <header>
-        <p class="txt-header">Como adicionar/atualizar disciplinas</p>
+        <p class="txt-header">Como adicionar ou atualizar disciplinas</p>
     </header>
+
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page" id="breadcrumblink">Como adicionar ou atualizar disciplinas</li>
+        </ol>
+    </nav>
 
     <div class="txt-body" style="padding: 0px;margin: 40px 8%;">
         <p>Se não encontrou a disciplina que estava procurando, ou ela está desatualizada (<a href="#disciplinas-disponiveis">ver todas disciplinas disponíveis</a>), siga o tutorial abaixo para saber como proceder. No repositório do projeto você encontra
@@ -80,7 +87,7 @@
         </p>
         <h3 class="topicos">2: Clone do Repositório</h3>
         <p>Clone o repositório forked para sua máquina local usando o seguinte comando no terminal:</p>
-        <pre><code class="language-git txt-body">git clone https://github.com/Carlos-kadu/calcmedia.git</code></pre>
+        <pre><code class="language-git txt-body">git clone https://github.com/[seu-usuario]/calcmedia.git</code></pre>
 
         <h3 class="topicos">3: Edição do Arquivo disciplinas.json</h3>
         <p>Abra o arquivo em "assets/json/disciplinas.json" e adicione uma nova entrada seguindo o padrão fornecido, ou atualize o cálculo da disciplina desejada. Padrão da entrada:</p>

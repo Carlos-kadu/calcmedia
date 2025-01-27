@@ -4,23 +4,23 @@
 /**/
 
 :root {
-    --color-bg: #000000;
-    --color-txt: #ffffff;
+    --color-bg: #0d0d11;
+    --color-txt: #dee2e6;
     --color-1: #4f46e5;
     --color-2: #8c42f5;
-    --color-painel: #121212;
+    --color-painel: #101216;
     --color-txt-2: #bbbbbb;
-    --color-input: #1c1c1c;
+    --color-input: #161b22;
 }
 
 .light-mode {
-    --color-bg: #fcfcfc;
-    --color-txt: #222222;
+    --color-bg: #e9ecef;
+    --color-txt: #212529;
     --color-1: #4f46e5;
     --color-2: #8c42f5;
-    --color-painel: #f0f0f0;
+    --color-painel: #dee2e6;
     --color-txt-2: #444444;
-    --color-input: #fefefe;
+    --color-input: #e9ecef;
 }
 
 * {
@@ -32,6 +32,7 @@
 html {
     min-height: 100vh;
     background: var(--color-1);
+    scroll-behavior: smooth;
 }
 
 a {
@@ -77,10 +78,11 @@ header {
 
 .painel {
     width: 500px;
-    background-color: var(--color-painel);
     border-radius: 20px;
-    margin: 3% 15px;
+    margin: 10px 15px;
     padding: 15px;
+    background: var(--color-painel);
+    color: var(--color-txt);
 }
 
 .painel-header span {
@@ -488,4 +490,14 @@ col footer {
 .imgs-sobre-icon {
     padding: 10px;
     max-height: 100px;
+}
+
+.breadcrumb {
+    background-color: var(--color-painel);
+    width: 100%;
+    border-radius: 0px;
+    margin-top: -16px;
+    & .active {
+        color: var(--color-txt)!important;
+    }
 }

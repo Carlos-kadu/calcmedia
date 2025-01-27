@@ -34,6 +34,14 @@
     <header>
         <p class="txt-header">Disciplinas disponíveis</p>
     </header>
+
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page" id="breadcrumblink">Disciplinas</li>
+        </ol>
+    </nav>
+
     <div class="txt-body" style="padding: 0px;margin: 40px 5%;">
         <p>Não encontrou a disciplina que queria ou ela está desatualizada? Fique à vontade para contribuir!
             <a href="como-adicionar-disciplinas.html">
@@ -61,7 +69,7 @@
                         <img class="align-self-center mr-3 img-disciplinas" src="assets/imgs/icone-disciplinas.png" alt="icone disciplinas">
                         <div class="media-body">
                             <p class="mt-0 mb-1" style="margin-bottom: 0px !important;">${disciplina.nome}</p>
-                            <p class="mt-0 mb-1" style="margin-top: -5px !important; font-size: 16px">Prof: ${disciplina.prof}</p>
+                            <p class="mt-0 mb-1" style="margin-top: -5px !important; font-size: 16px">Prof.: ${disciplina.prof}</p>
                             <p class="descricao-disciplinas">Atualizado em: ${disciplina.ultimaAtualizacao}</p>
                         </div><i style="background: linear-gradient(144deg, #af40ff, #4f46e5); -webkit-background-clip: text; color: transparent;" class="fa-solid fa-arrow-right"></i>
                     </div>
