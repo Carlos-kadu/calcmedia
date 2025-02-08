@@ -307,5 +307,18 @@
         "ultimaAtualizacao": "2024.2",
         "obs": "O valor máximo para cada nota é de: <br>Nota A1: 1. <br>Nota A2: 1. <br>Nota P1: 8. <br>Nota P2: 8. <br>Nota A3: 2. <br>Nota A4: 2. <br>Nota T1: 8. <br>Nota Extra: 1",
         "tags": ["Fundamentos de Redes de Computadores", "FRC", "Redes", "Clenio"]
-    }
+    },
+    "sbd1-glauco": {
+        "id": 23,
+        "url": "sbd1-glauco",
+        "nome": "sbd1",
+        "prof": "Glauco",
+        "qtdCampos": 3,
+        "nomeCampos": ["P1", "P2", "T"],
+        "pesos": [0.3, 0.4, 0.3],
+        "mediaAprovacao": 5,
+        "dividePor": 1,
+        "ultimaAtualizacao": "2024.2",
+        "tags": ["Banco de Dados", "SBD1", "Glauco"]  
+      }
 }
