@@ -311,7 +311,7 @@
     "sbd1-glauco": {
         "id": 23,
         "url": "sbd1-glauco",
-        "nome": "Sistema de Banco de Dados 1",
+        "nome": "sbd1",
         "prof": "Glauco",
         "qtdCampos": 3,
         "nomeCampos": ["P1", "P2", "T"],
