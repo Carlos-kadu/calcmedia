@@ -320,5 +320,21 @@
         "dividePor": 1,
         "ultimaAtualizacao": "2024.2",
         "tags": ["Banco de Dados", "SBD1", "Glauco"]  
+      },
+      "eda1-nilton.2": {
+        "id": 20,
+        "url": "eda1-nilton",
+        "nome": "EDA1 - Nilton",
+        "qtdCampos": 3,
+        "nomeCampos": ["p1", "p2", "p3"],
+        "pesos": [1, 1, 1],
+        "mediaAprovacao": 5,
+        "dividePor": 3,
+        "ultimaAtualizacao": "2024.2",
+        "calculos": {
+            "P": "p1 + p2 + p3",
+            "T": "(t1 + t2 + t3 + t4 + t5) / 5",
+            "M": "0.7 * P + 0.3 * T"
+        }
       }
 }
