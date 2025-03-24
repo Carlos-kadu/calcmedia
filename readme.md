@@ -1,6 +1,6 @@
 # Simulador de Médias para Disciplinas da Universidade de Brasília - Campus Gama
 
-Este é um simples site em JavaScript e HTML que foi criado para ajudar no aprendizado de JS e funciona como um simulador de médias para disciplinas da UnB - FGA.
+Este é um simples site em JavaScript e HTML que foi criado durante aprendizado de JS e funciona como um simulador de médias para disciplinas da UnB - FGA.
 
 ## Funcionalidades
 
