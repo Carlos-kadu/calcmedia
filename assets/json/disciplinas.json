@@ -320,5 +320,33 @@
         "dividePor": 1,
         "ultimaAtualizacao": "2024.2",
         "tags": ["Banco de Dados", "SBD1", "Glauco"]  
-      }
+      },
+    "paradigmas-edson": {
+        "id": 24,
+        "url": "paradigmas-edson",
+        "nome": "Paradigmas de Programação",
+        "prof": "Edson",
+        "qtdCampos": 3,
+        "nomeCampos": ["P1", "P2", "P3"],
+        "pesos": [1, 1, 1],
+        "mediaAprovacao": 50,
+        "dividePor": 1,
+        "ultimaAtualizacao": "2025.1",
+        "obs": "",
+        "tags": ["Paradigmas de Programação", "Paradigmas", "Programação", "Edson", "PP"]
+    },
+    "pspd-fernando": {
+        "id": 25,
+        "url": "pspd-fernando",
+        "nome": "PSPD",
+        "prof": "Fernando",
+        "qtdCampos": 5,
+        "nomeCampos": ["P1", "P2", "P3", "T", "E"],
+        "pesos": [0.9, 1.2, 1.5, 1.2, 1.2],
+        "mediaAprovacao": 5,
+        "dividePor": 6,
+        "ultimaAtualizacao": "2025.1",
+        "obs": "",
+        "tags": ["PSPD", "Fernando", "Programação para Sistemas Paralelos e Distribuídos", "Programação", "Sistemas", "Paralelos", "Distribuídos"]
+    }
 }
