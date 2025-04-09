@@ -1,8 +1,8 @@
-# Simulador de Médias para Disciplinas da Universidade de Brasília - Campus Gama
+# 🧮 Simulador de Médias para Disciplinas da UnB Campus Gama - FCTE
 
-Este é um simples site em JavaScript e HTML que foi criado durante aprendizado de JS e funciona como um simulador de médias para disciplinas da UnB - FGA.
+Este é um site em JavaScript, HTML, CSS e Bootstrap, que funciona como um simulador de médias para disciplinas da FCTE.
 
-## Funcionalidades
+## 🔧 Funcionalidades
 
 - Permite ao usuário inserir as notas de avaliações e trabalhos para cada disciplina.
 - Calcula a média ponderada das notas inseridas.
@@ -10,11 +10,11 @@ Este é um simples site em JavaScript e HTML que foi criado durante aprendizado 
 - Salva as notas e médias no armazenamento local para uma possivél simulação posterior.
 - "Faltômetro" onde o usuário pode ter controle de faltas em uma disciplina.
 
-## Contribuição
+## 🤝 Contribuição
 
-Este projeto foi criado como parte do aprendizado de JavaScript e HTML. Se você tiver sugestões de melhorias ou novas funcionalidades, fique à vontade para contribuir. Basta fazer um fork deste repositório, fazer suas alterações e enviar um pull request.
+Este projeto foi criado como parte do meu aprendizado de JavaScript. Se você tiver sugestões de melhorias, novas funcionalidades ou simplesmente atualizar/adicionar uma nova disciplina, fique à vontade para contribuir. Basta fazer um fork deste repositório, fazer suas alterações e enviar um pull request.
 
-## Tutorial para execução local
+## 📖 Tutorial para execução local
 ⚠️ Pré-requisitos
 - [Docker](https://www.docker.com/get-started)
 
@@ -39,10 +39,10 @@ docker run -d -p 8080:80 -v ./:/usr/share/nginx/html calcmedia
 ```
 Acesse em um navegador digitando `http://localhost:8080`
 
-## Tutorial para adicionar/atualizar disciplinas
+## 📖 Tutorial para adicionar/atualizar disciplinas
 https://carlos-kadu.github.io/calcmedia/como-adicionar-disciplinas.html
 
-## Licença
+## 📄 Licença
 
 Este projeto está licenciado sob a [MIT License](LICENSE).
 
