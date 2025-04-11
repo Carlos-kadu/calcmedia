@@ -14,6 +14,11 @@ Este é um site em JavaScript, HTML, CSS e Bootstrap, que funciona como um simul
 
 Este projeto foi criado como parte do meu aprendizado de JavaScript. Se você tiver sugestões de melhorias, novas funcionalidades ou simplesmente atualizar/adicionar uma nova disciplina, fique à vontade para contribuir. Basta fazer um fork deste repositório, fazer suas alterações e enviar um pull request.
 
+## 📸 Imagens
+
+![img](assets/imgs/calcmedia-img-readme.png)
+![gif](assets/imgs/gi-readme.gif)
+
 ## 📖 Tutorial para execução local
 ⚠️ Pré-requisitos
 - [Docker](https://www.docker.com/get-started)
