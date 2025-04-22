@@ -311,7 +311,7 @@
     "sbd1-glauco": {
         "id": 23,
         "url": "sbd1-glauco",
-        "nome": "sbd1",
+        "nome": "SBD1",
         "prof": "Glauco",
         "qtdCampos": 3,
         "nomeCampos": ["P1", "P2", "T"],
