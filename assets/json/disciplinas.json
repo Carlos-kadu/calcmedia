@@ -285,13 +285,13 @@
         "url": "sbd2-vandor",
         "nome": "SBD2",
         "prof": "Vandor",
-        "qtdCampos": 9,
+        "qtdCampos": 8,
         "nomeCampos": ["V1", "V2", "V3", "V4", "V5", "V6", "EPF", "E"],
         "pesos": [0.06, 0.04, 0.05, 0.04, 0.03, 0.03, 0.65, 0.10],
         "mediaAprovacao": 5,
         "dividePor": 1,
         "ultimaAtualizacao": "2025.2",
-        "obs": "A média mínima é 5.",
+        "obs": "",
         "tags": ["Sistemas de Banco de Dados 2", "vandor", "sbd2", "bancos", "dados"]
     },
     "redes-clenio": {
