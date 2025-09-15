@@ -285,13 +285,13 @@
         "url": "sbd2-vandor",
         "nome": "SBD2",
         "prof": "Vandor",
-        "qtdCampos": 9,
-        "nomeCampos": ["R1", "R2", "P1", "R3", "R4", "R5", "TF", "R6", "E"],
-        "pesos": [0.06, 0.08, 0.21, 0.07, 0.07, 0.08, 0.25, 0.08, 0.10],
+        "qtdCampos": 8,
+        "nomeCampos": ["V1", "V2", "V3", "V4", "V5", "V6", "EPF", "E"],
+        "pesos": [0.06, 0.04, 0.05, 0.04, 0.03, 0.03, 0.65, 0.10],
         "mediaAprovacao": 5,
         "dividePor": 1,
-        "ultimaAtualizacao": "2024.2",
-        "obs": "Para ser aprovado, o aluno deve obter uma nota igual ou superior a 4,0 (quatro pontos) no Trabalho Final (TF), além de atender aos critérios tradicionais de frequência e média mínima exigida.",
+        "ultimaAtualizacao": "2025.2",
+        "obs": "",
         "tags": ["Sistemas de Banco de Dados 2", "vandor", "sbd2", "bancos", "dados"]
     },
     "redes-clenio": {
